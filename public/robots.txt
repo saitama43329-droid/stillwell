@@ -1,0 +1,13 @@
+# robots.txt for StillWell English Lessons
+
+User-agent: *
+Allow: /
+
+# Disallow admin or private pages (if any in future)
+# Disallow: /admin/
+
+# Sitemap location
+Sitemap: https://stillwell-english.com/sitemap.xml
+
+# Crawl-delay (optional, helps prevent server overload)
+Crawl-delay: 1
