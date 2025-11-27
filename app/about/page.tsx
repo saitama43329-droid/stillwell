@@ -1,15 +1,65 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import { useLanguage } from "@/lib/LanguageContext";
 import { extendedTranslations } from "@/lib/translations";
 
+function QuoteTypingAnimation({ quotes }: { quotes: string[] }) {
+  const [text, setText] = useState("");
+  const [quoteIndex, setQuoteIndex] = useState(0);
+  const [isDeleting, setIsDeleting] = useState(false);
+  const [delta, setDelta] = useState(100);
+
+  useEffect(() => {
+    const currentQuote = quotes[quoteIndex];
+
+    const handleTyping = () => {
+      if (!isDeleting) {
+        if (text.length < currentQuote.length) {
+          setText(currentQuote.substring(0, text.length + 1));
+          setDelta(100 - Math.random() * 30);
+        } else {
+          setDelta(3000);
+          setIsDeleting(true);
+        }
+      } else {
+        if (text.length > 0) {
+          setText(currentQuote.substring(0, text.length - 1));
+          setDelta(50);
+        } else {
+          setIsDeleting(false);
+          setQuoteIndex((prev) => (prev + 1) % quotes.length);
+          setDelta(500);
+        }
+      }
+    };
+
+    const timer = setTimeout(handleTyping, delta);
+    return () => clearTimeout(timer);
+  }, [text, isDeleting, quoteIndex, delta, quotes]);
+
+  return (
+    <div className="min-h-[120px] sm:min-h-[100px] flex items-center justify-center px-4">
+      <p className="text-xl sm:text-2xl md:text-3xl font-serif text-charcoal text-center leading-relaxed break-words">
+        "{text}
+        <span className="animate-pulse text-sage">|</span>"
+      </p>
+    </div>
+  );
+}
+
 export default function About() {
+  const [mounted, setMounted] = useState(false);
   const { language } = useLanguage();
   const t = extendedTranslations[language].about;
   const nav = extendedTranslations[language].nav;
   const home = extendedTranslations[language].home;
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   return (
     <main className="min-h-screen bg-cream">
@@ -66,6 +116,15 @@ export default function About() {
           <p className="text-xl text-charcoal/70 max-w-2xl mx-auto">
             {t.subtitle}
           </p>
+        </div>
+      </section>
+
+      {/* Inspirational Quotes Section */}
+      <section className="px-6 py-12 bg-gradient-to-br from-sage/5 via-terracotta/5 to-cream">
+        <div className="max-w-5xl mx-auto">
+          <div className="bg-warmWhite/80 backdrop-blur-sm rounded-3xl shadow-2xl border-2 border-sage/10 p-8 md:p-12">
+            {mounted && <QuoteTypingAnimation quotes={t.inspirationalQuotes} />}
+          </div>
         </div>
       </section>
 
@@ -190,11 +249,11 @@ export default function About() {
           <h2 className="text-4xl md:text-5xl font-serif font-bold text-charcoal">
             {t.ctaTitle}
           </h2>
-          <p className="text-lg text-charcoal/70">
+          <p className="text-lg text-charcoal/70 max-w-2xl mx-auto">
             {t.ctaText}
           </p>
           <Link href="/start-journey">
-            <button className="px-12 py-5 bg-terracotta text-warmWhite rounded-full text-xl font-medium hover:bg-terracotta/90 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+            <button className="px-12 py-5 bg-terracotta text-warmWhite rounded-full text-xl font-semibold hover:bg-terracotta/90 transition-all duration-300 shadow-2xl hover:shadow-3xl transform hover:-translate-y-1 active:scale-95">
               {home.startJourney}
             </button>
           </Link>
