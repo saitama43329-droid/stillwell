@@ -7,44 +7,50 @@ import { useLanguage } from "@/lib/LanguageContext";
 import { extendedTranslations } from "@/lib/translations";
 
 function QuoteTypingAnimation({ quotes }: { quotes: string[] }) {
-  const [text, setText] = useState("");
-  const [quoteIndex, setQuoteIndex] = useState(0);
-  const [isDeleting, setIsDeleting] = useState(false);
-  const [delta, setDelta] = useState(100);
+  const [displayText, setDisplayText] = useState("");
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isTyping, setIsTyping] = useState(true);
+  const [charIndex, setCharIndex] = useState(0);
 
   useEffect(() => {
-    const currentQuote = quotes[quoteIndex];
-
-    const handleTyping = () => {
-      if (!isDeleting) {
-        if (text.length < currentQuote.length) {
-          setText(currentQuote.substring(0, text.length + 1));
-          setDelta(100 - Math.random() * 30);
-        } else {
-          setDelta(3000);
-          setIsDeleting(true);
-        }
+    const currentQuote = quotes[currentIndex];
+    
+    if (isTyping) {
+      if (charIndex < currentQuote.length) {
+        const timeout = setTimeout(() => {
+          setDisplayText(currentQuote.substring(0, charIndex + 1));
+          setCharIndex(charIndex + 1);
+        }, 80);
+        return () => clearTimeout(timeout);
       } else {
-        if (text.length > 0) {
-          setText(currentQuote.substring(0, text.length - 1));
-          setDelta(50);
-        } else {
-          setIsDeleting(false);
-          setQuoteIndex((prev) => (prev + 1) % quotes.length);
-          setDelta(500);
-        }
+        const timeout = setTimeout(() => {
+          setIsTyping(false);
+        }, 2500);
+        return () => clearTimeout(timeout);
       }
-    };
-
-    const timer = setTimeout(handleTyping, delta);
-    return () => clearTimeout(timer);
-  }, [text, isDeleting, quoteIndex, delta, quotes]);
+    } else {
+      if (charIndex > 0) {
+        const timeout = setTimeout(() => {
+          setDisplayText(currentQuote.substring(0, charIndex - 1));
+          setCharIndex(charIndex - 1);
+        }, 40);
+        return () => clearTimeout(timeout);
+      } else {
+        const timeout = setTimeout(() => {
+          setCurrentIndex((currentIndex + 1) % quotes.length);
+          setIsTyping(true);
+        }, 300);
+        return () => clearTimeout(timeout);
+      }
+    }
+  }, [charIndex, isTyping, currentIndex, quotes]);
 
   return (
     <div className="min-h-[120px] sm:min-h-[100px] flex items-center justify-center px-4">
       <p className="text-xl sm:text-2xl md:text-3xl font-serif text-charcoal text-center leading-relaxed break-words">
-        "{text}
-        <span className="animate-pulse text-sage">|</span>"
+        <span className="inline-block">"{displayText}</span>
+        <span className="inline-block w-0.5 h-6 sm:h-7 md:h-8 bg-sage ml-1 animate-pulse align-middle"></span>
+        <span className="inline-block">"</span>
       </p>
     </div>
   );
