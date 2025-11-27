@@ -48,9 +48,8 @@ function QuoteTypingAnimation({ quotes }: { quotes: string[] }) {
   return (
     <div className="min-h-[120px] sm:min-h-[100px] flex items-center justify-center px-4">
       <p className="text-xl sm:text-2xl md:text-3xl font-serif text-charcoal text-center leading-relaxed break-words">
-        <span className="inline-block">"{displayText}</span>
-        <span className="inline-block w-0.5 h-6 sm:h-7 md:h-8 bg-sage ml-1 animate-pulse align-middle"></span>
-        <span className="inline-block">"</span>
+        "{displayText}
+        <span className="inline-block w-0.5 h-6 sm:h-7 md:h-8 bg-sage ml-1 animate-pulse align-middle"></span>"
       </p>
     </div>
   );
