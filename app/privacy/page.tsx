@@ -48,7 +48,7 @@ export default function Privacy() {
       {/* Content */}
       <section className="px-6 py-16 md:py-24">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-5xl md:text-6xl font-serif font-bold text-charcoal mb-8">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-charcoal mb-8 break-words">
             {t.title}
           </h1>
           <p className="text-sm text-charcoal/60 mb-12">{t.lastUpdated}</p>
