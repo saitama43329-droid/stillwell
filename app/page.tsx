@@ -259,6 +259,15 @@ export default function Home() {
       {/* Hero Section */}
       <section className="flex-1 flex items-center justify-center px-6 py-16 md:py-24 bg-gradient-to-b from-cream to-warmWhite/30">
         <div className="max-w-4xl mx-auto text-center space-y-8 w-full">
+          {/* Logo */}
+          <div className="flex justify-center mb-6">
+            <img 
+              src="/logoicon.png" 
+              alt="StillWell Logo" 
+              className="w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 object-contain drop-shadow-2xl"
+            />
+          </div>
+          
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif font-bold text-charcoal leading-tight">
             {t.title}
             <br />
