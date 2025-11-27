@@ -386,12 +386,12 @@ export default function Home() {
               {t.footerAddress}
             </p>
           </div>
-          <div className="flex flex-wrap justify-center gap-6 pt-2 text-xs">
-            <Link href="/privacy" className="hover:text-sage transition-colors text-warmWhite/50">
+          <div className="flex flex-wrap justify-center gap-3 sm:gap-6 pt-2 text-xs px-4">
+            <Link href="/privacy" className="hover:text-sage transition-colors text-warmWhite/50 break-words text-center">
               {t.privacyPolicy}
             </Link>
-            <span className="text-warmWhite/30">•</span>
-            <Link href="/terms" className="hover:text-sage transition-colors text-warmWhite/50">
+            <span className="text-warmWhite/30 hidden sm:inline">•</span>
+            <Link href="/terms" className="hover:text-sage transition-colors text-warmWhite/50 break-words text-center">
               {t.termsOfService}
             </Link>
           </div>
