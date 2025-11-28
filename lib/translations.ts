@@ -6,6 +6,7 @@ export const translations = {
       home: 'Home',
       about: 'About',
       lessons: 'Lessons',
+      blog: 'Blog',
       contact: 'Contact',
       backHome: 'Back to Home',
     },
@@ -54,6 +55,7 @@ export const translations = {
       home: 'Главная',
       about: 'О нас',
       lessons: 'Уроки',
+      blog: 'Блог',
       contact: 'Контакты',
       backHome: 'Вернуться на главную',
     },
@@ -622,4 +624,150 @@ export const extendedTranslations = {
       section5Text: 'Мы оставляем за собой право изменять эти условия в любое время. Изменения вступают в силу после публикации на этой странице.',
     },
   },
+};
+
+
+export const blogTranslations = {
+  en: {
+    nav: {
+      home: 'Home',
+      about: 'About',
+      lessons: 'Lessons',
+      contact: 'Contact',
+    },
+    title: 'English Learning Tips',
+    subtitle: 'Practical advice and insights to help you master English with confidence',
+    ctaTitle: 'Ready to Start Your Journey?',
+    ctaText: 'Join us for personalized English lessons designed for your success',
+    ctaButton: 'Book Your First Lesson',
+    footerTagline: 'Master English with calm confidence',
+    footerTeacher: 'Taught by Ksenia Volchemateva',
+    posts: [
+      {
+        icon: '📚',
+        title: 'Start with What You Love',
+        excerpt: 'Learning English becomes easier when you study topics that genuinely interest you. Read books, watch shows, or listen to music in English about subjects you already enjoy.',
+        readTime: '3 min read'
+      },
+      {
+        icon: '🗣️',
+        title: 'Speak from Day One',
+        excerpt: 'Don\'t wait until you\'re "ready" to start speaking. Practice speaking English from the very beginning, even if you make mistakes. Every conversation is a learning opportunity.',
+        readTime: '4 min read'
+      },
+      {
+        icon: '✍️',
+        title: 'Write a Little Every Day',
+        excerpt: 'Keep a simple journal in English. Write about your day, your thoughts, or your goals. Daily writing builds vocabulary and helps you think in English naturally.',
+        readTime: '3 min read'
+      },
+      {
+        icon: '👂',
+        title: 'Listen Actively',
+        excerpt: 'Listen to English podcasts, audiobooks, or videos. Focus on understanding the main ideas first, then work on catching details. Active listening improves comprehension faster.',
+        readTime: '5 min read'
+      },
+      {
+        icon: '🎯',
+        title: 'Set Small, Clear Goals',
+        excerpt: 'Instead of "I want to be fluent," try "I will learn 10 new words this week" or "I will watch one English video daily." Small goals lead to big progress.',
+        readTime: '3 min read'
+      },
+      {
+        icon: '🤝',
+        title: 'Find a Learning Partner',
+        excerpt: 'Practice with a friend, join a language exchange, or work with a teacher. Having someone to practice with keeps you motivated and accountable.',
+        readTime: '4 min read'
+      },
+      {
+        icon: '📖',
+        title: 'Read Out Loud',
+        excerpt: 'Reading aloud helps with pronunciation, rhythm, and confidence. Start with simple texts and gradually move to more complex materials as you improve.',
+        readTime: '3 min read'
+      },
+      {
+        icon: '🎬',
+        title: 'Use Subtitles Wisely',
+        excerpt: 'Start with English subtitles when watching English content. This helps you connect spoken words with written text. Gradually reduce subtitle use as you improve.',
+        readTime: '4 min read'
+      },
+      {
+        icon: '💭',
+        title: 'Think in English',
+        excerpt: 'Try to think in English throughout your day. Describe what you see, plan your day, or have conversations with yourself in English. This builds mental fluency.',
+        readTime: '3 min read'
+      },
+    ]
+  },
+  ru: {
+    nav: {
+      home: 'Главная',
+      about: 'О нас',
+      lessons: 'Уроки',
+      contact: 'Контакты',
+    },
+    title: 'Советы по Изучению Английского',
+    subtitle: 'Практические советы и идеи, которые помогут вам уверенно овладеть английским',
+    ctaTitle: 'Готовы Начать Своё Путешествие?',
+    ctaText: 'Присоединяйтесь к нам для персонализированных уроков английского',
+    ctaButton: 'Забронировать Первый Урок',
+    footerTagline: 'Овладейте английским со спокойной уверенностью',
+    footerTeacher: 'Преподаватель: Ксения Волчематева',
+    posts: [
+      {
+        icon: '📚',
+        title: 'Начните с Того, Что Любите',
+        excerpt: 'Изучение английского становится легче, когда вы учите темы, которые вам действительно интересны. Читайте книги, смотрите шоу или слушайте музыку на английском о том, что вам нравится.',
+        readTime: '3 мин чтения'
+      },
+      {
+        icon: '🗣️',
+        title: 'Говорите с Первого Дня',
+        excerpt: 'Не ждите, пока будете "готовы" начать говорить. Практикуйте английский с самого начала, даже если делаете ошибки. Каждый разговор — это возможность учиться.',
+        readTime: '4 мин чтения'
+      },
+      {
+        icon: '✍️',
+        title: 'Пишите Немного Каждый День',
+        excerpt: 'Ведите простой дневник на английском. Пишите о своём дне, мыслях или целях. Ежедневное письмо расширяет словарный запас и помогает думать на английском естественно.',
+        readTime: '3 мин чтения'
+      },
+      {
+        icon: '👂',
+        title: 'Слушайте Активно',
+        excerpt: 'Слушайте английские подкасты, аудиокниги или видео. Сначала фокусируйтесь на понимании основных идей, затем работайте над деталями. Активное слушание улучшает понимание быстрее.',
+        readTime: '5 мин чтения'
+      },
+      {
+        icon: '🎯',
+        title: 'Ставьте Маленькие, Чёткие Цели',
+        excerpt: 'Вместо "Я хочу свободно говорить" попробуйте "Я выучу 10 новых слов на этой неделе" или "Я буду смотреть одно английское видео ежедневно". Маленькие цели ведут к большому прогрессу.',
+        readTime: '3 мин чтения'
+      },
+      {
+        icon: '🤝',
+        title: 'Найдите Партнёра для Обучения',
+        excerpt: 'Практикуйтесь с другом, присоединитесь к языковому обмену или работайте с преподавателем. Наличие партнёра для практики поддерживает мотивацию и ответственность.',
+        readTime: '4 мин чтения'
+      },
+      {
+        icon: '📖',
+        title: 'Читайте Вслух',
+        excerpt: 'Чтение вслух помогает с произношением, ритмом и уверенностью. Начните с простых текстов и постепенно переходите к более сложным материалам по мере улучшения.',
+        readTime: '3 мин чтения'
+      },
+      {
+        icon: '🎬',
+        title: 'Используйте Субтитры Мудро',
+        excerpt: 'Начните с английских субтитров при просмотре английского контента. Это помогает связать устную речь с письменным текстом. Постепенно уменьшайте использование субтитров.',
+        readTime: '4 мин чтения'
+      },
+      {
+        icon: '💭',
+        title: 'Думайте на Английском',
+        excerpt: 'Попробуйте думать на английском в течение дня. Описывайте то, что видите, планируйте свой день или разговаривайте с собой на английском. Это развивает ментальную беглость.',
+        readTime: '3 мин чтения'
+      },
+    ]
+  }
 };

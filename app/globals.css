@@ -25,4 +25,13 @@
       font-size: 14px;
     }
   }
+  
+  /* Ensure all text wraps properly on small screens */
+  @media (max-width: 440px) {
+    h1, h2, h3, h4, h5, h6, p, span, a, li {
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+      hyphens: auto;
+    }
+  }
 }

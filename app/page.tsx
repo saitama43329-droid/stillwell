@@ -154,14 +154,14 @@ export default function Home() {
           
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-6 text-sm font-medium text-charcoal">
-            <Link href="/about" className="hover:text-sage transition-all duration-200">
+            <Link href="/about" className="transition-all duration-200">
               {nav.about}
             </Link>
-            <Link href="/lessons" className="hover:text-sage transition-all duration-200">
+            <Link href="/lessons" className="transition-all duration-200">
               {nav.lessons}
             </Link>
-            <Link href="/start-journey" className="hover:text-sage transition-all duration-200">
-              {nav.contact}
+            <Link href="/blog" className="transition-all duration-200">
+              {nav.blog}
             </Link>
             <LanguageSwitcher />
           </div>
@@ -176,7 +176,7 @@ export default function Home() {
                   menu.classList.toggle('translate-x-full');
                 }
               }}
-              className="p-2 text-charcoal hover:text-sage transition-colors"
+              className="p-2 text-charcoal transition-colors"
               aria-label="Toggle menu"
             >
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -202,7 +202,7 @@ export default function Home() {
                     menu.classList.add('translate-x-full');
                   }
                 }}
-                className="p-2 text-charcoal hover:text-sage transition-colors"
+                className="p-2 text-charcoal transition-colors"
                 aria-label="Close menu"
               >
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -213,7 +213,7 @@ export default function Home() {
             <div className="flex flex-col gap-2 p-6" style={{ backgroundColor: '#ffffff' }}>
               <Link
                 href="/about"
-                className="text-lg font-medium text-charcoal hover:text-sage hover:bg-sage/10 px-4 py-3 rounded-lg transition-all"
+                className="text-lg font-medium text-charcoal px-4 py-3 rounded-lg transition-all"
                 onClick={() => {
                   const menu = document.getElementById('mobile-menu');
                   if (menu) menu.classList.add('translate-x-full');
@@ -223,7 +223,7 @@ export default function Home() {
               </Link>
               <Link
                 href="/lessons"
-                className="text-lg font-medium text-charcoal hover:text-sage hover:bg-sage/10 px-4 py-3 rounded-lg transition-all"
+                className="text-lg font-medium text-charcoal px-4 py-3 rounded-lg transition-all"
                 onClick={() => {
                   const menu = document.getElementById('mobile-menu');
                   if (menu) menu.classList.add('translate-x-full');
@@ -232,14 +232,14 @@ export default function Home() {
                 {nav.lessons}
               </Link>
               <Link
-                href="/start-journey"
-                className="text-lg font-medium text-charcoal hover:text-sage hover:bg-sage/10 px-4 py-3 rounded-lg transition-all"
+                href="/blog"
+                className="text-lg font-medium text-charcoal px-4 py-3 rounded-lg transition-all"
                 onClick={() => {
                   const menu = document.getElementById('mobile-menu');
                   if (menu) menu.classList.add('translate-x-full');
                 }}
               >
-                {nav.contact}
+                {nav.blog}
               </Link>
             </div>
           </div>
@@ -268,10 +268,10 @@ export default function Home() {
             />
           </div>
           
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif font-bold text-charcoal leading-tight">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-serif font-bold text-charcoal leading-tight px-2">
             {t.title}
             <br />
-            <span className="text-sage">{t.titleAccent}</span>
+            <span className="text-sage inline-block" style={{ hyphens: 'auto', wordBreak: 'keep-all' }}>{t.titleAccent}</span>
           </h1>
 
           <div className="h-20 flex items-center justify-center w-full">
@@ -298,13 +298,13 @@ export default function Home() {
       </section>
 
       {/* Features Section */}
-      <section className="px-6 py-20 md:py-24 bg-warmWhite">
+      <section className="px-4 sm:px-6 py-12 sm:py-20 md:py-24 bg-warmWhite">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-serif font-bold text-center mb-16 text-charcoal">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-center mb-12 sm:mb-16 text-charcoal break-words">
             {t.whyTitle}
           </h2>
-          <div className="grid md:grid-cols-3 gap-10 md:gap-12">
-            <div className="text-center space-y-4">
+          <div className="grid md:grid-cols-3 gap-8 sm:gap-10 md:gap-12">
+            <div className="text-center space-y-4 px-2">
               <div className="w-16 h-16 mx-auto bg-sage/20 rounded-full flex items-center justify-center">
                 <svg
                   className="w-8 h-8 text-sage"
@@ -320,15 +320,15 @@ export default function Home() {
                   />
                 </svg>
               </div>
-              <h3 className="text-xl font-serif font-bold text-charcoal">
+              <h3 className="text-lg sm:text-xl font-serif font-bold text-charcoal break-words">
                 {t.thoughtfulTitle}
               </h3>
-              <p className="text-charcoal/70">
+              <p className="text-sm sm:text-base text-charcoal/70 break-words">
                 {t.thoughtfulDesc}
               </p>
             </div>
 
-            <div className="text-center space-y-4">
+            <div className="text-center space-y-4 px-2">
               <div className="w-16 h-16 mx-auto bg-terracotta/20 rounded-full flex items-center justify-center">
                 <svg
                   className="w-8 h-8 text-terracotta"
@@ -344,15 +344,15 @@ export default function Home() {
                   />
                 </svg>
               </div>
-              <h3 className="text-xl font-serif font-bold text-charcoal">
+              <h3 className="text-lg sm:text-xl font-serif font-bold text-charcoal break-words">
                 {t.calmTitle}
               </h3>
-              <p className="text-charcoal/70">
+              <p className="text-sm sm:text-base text-charcoal/70 break-words">
                 {t.calmDesc}
               </p>
             </div>
 
-            <div className="text-center space-y-4">
+            <div className="text-center space-y-4 px-2">
               <div className="w-16 h-16 mx-auto bg-sage/20 rounded-full flex items-center justify-center">
                 <svg
                   className="w-8 h-8 text-sage"
@@ -368,10 +368,10 @@ export default function Home() {
                   />
                 </svg>
               </div>
-              <h3 className="text-xl font-serif font-bold text-charcoal">
+              <h3 className="text-lg sm:text-xl font-serif font-bold text-charcoal break-words">
                 {t.personalTitle}
               </h3>
-              <p className="text-charcoal/70">
+              <p className="text-sm sm:text-base text-charcoal/70 break-words">
                 {t.personalDesc}
               </p>
             </div>
@@ -396,11 +396,11 @@ export default function Home() {
             </p>
           </div>
           <div className="flex flex-wrap justify-center gap-3 sm:gap-6 pt-2 text-xs px-4">
-            <Link href="/privacy" className="hover:text-sage transition-colors text-warmWhite/50 break-words text-center">
+            <Link href="/privacy" className="transition-colors text-warmWhite/50 break-words text-center">
               {t.privacyPolicy}
             </Link>
             <span className="text-warmWhite/30 hidden sm:inline">•</span>
-            <Link href="/terms" className="hover:text-sage transition-colors text-warmWhite/50 break-words text-center">
+            <Link href="/terms" className="transition-colors text-warmWhite/50 break-words text-center">
               {t.termsOfService}
             </Link>
           </div>
