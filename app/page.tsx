@@ -379,6 +379,81 @@ export default function Home() {
         </div>
       </section>
 
+      {/* FAQ Section */}
+      <section className="px-4 sm:px-6 py-12 sm:py-16 md:py-20 bg-gradient-to-b from-cream to-warmWhite border-t border-charcoal/10">
+        <div className="max-w-2xl mx-auto">
+          {/* Decorative top line */}
+          <div className="flex justify-center mb-8 sm:mb-10">
+            <div className="w-20 sm:w-24 h-1 bg-gradient-to-r from-sage via-terracotta to-sage rounded-full"></div>
+          </div>
+
+          {/* FAQ Card */}
+          <Link href="/faq" className="group block">
+            <div className="bg-warmWhite rounded-3xl p-8 sm:p-10 md:p-12 shadow-2xl hover:shadow-3xl transition-all duration-500 border-2 border-charcoal/10 hover:border-sage/40 transform hover:-translate-y-2 active:scale-98">
+              <div className="flex flex-col items-center text-center space-y-5 sm:space-y-6">
+                {/* Icon */}
+                <div className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 bg-gradient-to-br from-sage/20 to-terracotta/20 rounded-3xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                  <span className="text-5xl sm:text-6xl md:text-7xl">❓</span>
+                </div>
+                
+                {/* Title */}
+                <h3 className="text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-charcoal group-hover:text-sage transition-colors break-words leading-tight">
+                  {language === 'en' ? 'Frequently Asked Questions' : 'Часто Задаваемые Вопросы'}
+                </h3>
+                
+                {/* Description */}
+                <p className="text-base sm:text-lg md:text-xl text-charcoal/75 break-words leading-relaxed max-w-xl">
+                  {language === 'en' 
+                    ? 'Find answers to common questions about our English lessons, teaching methods, and scheduling' 
+                    : 'Найдите ответы на распространённые вопросы о наших уроках английского, методах обучения и расписании'}
+                </p>
+                
+                {/* CTA Button */}
+                <div className="pt-4 sm:pt-6">
+                  <div className="inline-flex items-center gap-3 px-8 sm:px-10 py-4 sm:py-5 bg-gradient-to-r from-sage to-sage/90 text-warmWhite rounded-full text-base sm:text-lg font-semibold group-hover:from-sage/90 group-hover:to-sage transition-all duration-300 shadow-xl group-hover:shadow-2xl">
+                    <span>{language === 'en' ? 'View All Questions' : 'Посмотреть Все Вопросы'}</span>
+                    <svg className="w-5 h-5 sm:w-6 sm:h-6 group-hover:translate-x-2 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                    </svg>
+                  </div>
+                </div>
+
+                {/* Quick Stats */}
+                <div className="pt-6 sm:pt-8 border-t border-charcoal/10 w-full">
+                  <div className="flex flex-wrap justify-center gap-6 sm:gap-8 text-center">
+                    <div className="space-y-1">
+                      <div className="text-2xl sm:text-3xl font-bold text-sage">12+</div>
+                      <div className="text-xs sm:text-sm text-charcoal/60 break-words">
+                        {language === 'en' ? 'Questions' : 'Вопросов'}
+                      </div>
+                    </div>
+                    <div className="w-px bg-charcoal/10"></div>
+                    <div className="space-y-1">
+                      <div className="text-2xl sm:text-3xl font-bold text-terracotta">100%</div>
+                      <div className="text-xs sm:text-sm text-charcoal/60 break-words">
+                        {language === 'en' ? 'Answered' : 'Отвечено'}
+                      </div>
+                    </div>
+                    <div className="w-px bg-charcoal/10"></div>
+                    <div className="space-y-1">
+                      <div className="text-2xl sm:text-3xl font-bold text-sage">24/7</div>
+                      <div className="text-xs sm:text-sm text-charcoal/60 break-words">
+                        {language === 'en' ? 'Available' : 'Доступно'}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </Link>
+
+          {/* Decorative bottom line */}
+          <div className="flex justify-center mt-8 sm:mt-10">
+            <div className="w-16 sm:w-20 h-0.5 bg-sage/30 rounded-full"></div>
+          </div>
+        </div>
+      </section>
+
       {/* Footer */}
       <footer className="px-6 py-12 bg-charcoal text-warmWhite">
         <div className="max-w-7xl mx-auto text-center space-y-4">

@@ -849,3 +849,139 @@ export const blogTranslations = {
     ]
   }
 };
+
+
+export const faqTranslations = {
+  en: {
+    nav: {
+      home: 'Home',
+      about: 'About',
+      lessons: 'Lessons',
+      blog: 'Articles',
+      contact: 'Contact',
+    },
+    title: 'Frequently Asked Questions',
+    subtitle: 'Find answers to common questions about our English lessons',
+    ctaTitle: 'Still Have Questions?',
+    ctaText: 'Contact us directly and we\'ll be happy to help you',
+    ctaButton: 'Get in Touch',
+    footerTagline: 'Master English with calm confidence',
+    footerTeacher: 'Taught by Ksenia Volchemateva',
+    faqs: [
+      {
+        question: 'What age group are the lessons designed for?',
+        answer: 'Our lessons are specifically designed for children aged 13 and below. We tailor our teaching approach to match each child\'s age, learning style, and current English level to ensure the most effective and enjoyable learning experience.'
+      },
+      {
+        question: 'How long is each lesson?',
+        answer: 'We offer flexible lesson durations to suit different needs and attention spans. Standard lessons are 45 minutes, but we also offer 30-minute sessions for younger children and 60-minute extended lessons for more intensive learning. We can discuss the best option for your child during our initial consultation.'
+      },
+      {
+        question: 'Are lessons conducted online or in person?',
+        answer: 'Lessons are conducted both online and in person, depending on your location and preference. Online lessons are conducted via video call, providing the same quality of instruction with the convenience of learning from home. In-person lessons are available for students in the Amazar area.'
+      },
+      {
+        question: 'What teaching method do you use?',
+        answer: 'We use a calm, thoughtful approach that focuses on building genuine understanding rather than memorization. Our method combines conversation practice, interactive activities, and personalized materials based on each student\'s interests. We believe in creating a supportive, pressure-free environment where mistakes are seen as learning opportunities.'
+      },
+      {
+        question: 'How do I schedule a lesson?',
+        answer: 'Scheduling is easy! Simply contact us via WhatsApp at +79145251745 or use the "Start Your Journey" button on our website. We\'ll discuss your child\'s needs, find a convenient time slot, and arrange a trial lesson so you can see if our approach is the right fit.'
+      },
+      {
+        question: 'Do you offer a trial lesson?',
+        answer: 'Yes! We offer an introductory trial lesson so you and your child can experience our teaching style firsthand. This allows us to assess your child\'s current level, understand their learning goals, and determine the best approach for their success. Contact us to schedule your trial lesson.'
+      },
+      {
+        question: 'What materials do I need for lessons?',
+        answer: 'For online lessons, you\'ll need a computer or tablet with a stable internet connection, a webcam, and a microphone. We provide all learning materials digitally. For in-person lessons, we bring everything needed. We may occasionally suggest supplementary materials like workbooks or reading books based on your child\'s progress.'
+      },
+      {
+        question: 'How do you track progress?',
+        answer: 'We track progress through regular assessments, observation during lessons, and ongoing communication with parents. You\'ll receive periodic updates about your child\'s development, areas of strength, and areas for improvement. We believe in celebrating small wins and maintaining open communication about your child\'s learning journey.'
+      },
+      {
+        question: 'What if my child misses a lesson?',
+        answer: 'We understand that life happens! If you need to cancel or reschedule a lesson, please let us know as soon as possible. We\'ll work together to find a suitable alternative time. Our cancellation and rescheduling policy will be discussed when you book your first lesson.'
+      },
+      {
+        question: 'Can parents sit in on lessons?',
+        answer: 'For younger children or during the first few lessons, parents are welcome to be present if it helps the child feel more comfortable. However, we find that children often participate more freely when parents observe from a distance. We\'re happy to discuss what works best for your child and provide regular updates on their progress.'
+      },
+      {
+        question: 'What makes StillWell different from other English programs?',
+        answer: 'StillWell focuses on calm, mindful learning rather than rushing through material. We provide personalized one-on-one attention, adapt to each child\'s pace, and create lessons around their interests. Our approach emphasizes understanding over memorization, confidence over perfection, and genuine communication over test scores.'
+      },
+      {
+        question: 'How quickly will my child see results?',
+        answer: 'Every child learns at their own pace, and we celebrate progress rather than speed. Most students begin showing increased confidence and improved communication skills within the first few weeks. Significant improvements in vocabulary, grammar, and fluency typically become evident after 2-3 months of consistent lessons. Remember, sustainable learning takes time, and we\'re here for the journey.'
+      },
+    ]
+  },
+  ru: {
+    nav: {
+      home: 'Главная',
+      about: 'О нас',
+      lessons: 'Уроки',
+      blog: 'Статьи',
+      contact: 'Контакты',
+    },
+    title: 'Часто Задаваемые Вопросы',
+    subtitle: 'Найдите ответы на распространённые вопросы о наших уроках английского',
+    ctaTitle: 'Остались Вопросы?',
+    ctaText: 'Свяжитесь с нами напрямую, и мы будем рады помочь вам',
+    ctaButton: 'Связаться с Нами',
+    footerTagline: 'Овладейте английским со спокойной уверенностью',
+    footerTeacher: 'Преподаватель: Ксения Волчематева',
+    faqs: [
+      {
+        question: 'Для какой возрастной группы предназначены уроки?',
+        answer: 'Наши уроки специально разработаны для детей в возрасте до 13 лет. Мы адаптируем наш подход к обучению в соответствии с возрастом каждого ребёнка, стилем обучения и текущим уровнем английского, чтобы обеспечить наиболее эффективный и приятный опыт обучения.'
+      },
+      {
+        question: 'Какова продолжительность каждого урока?',
+        answer: 'Мы предлагаем гибкую продолжительность уроков для разных потребностей и концентрации внимания. Стандартные уроки длятся 45 минут, но мы также предлагаем 30-минутные занятия для младших детей и 60-минутные расширенные уроки для более интенсивного обучения. Мы можем обсудить лучший вариант для вашего ребёнка во время первичной консультации.'
+      },
+      {
+        question: 'Уроки проводятся онлайн или лично?',
+        answer: 'Уроки проводятся как онлайн, так и лично, в зависимости от вашего местоположения и предпочтений. Онлайн-уроки проводятся через видеозвонок, обеспечивая то же качество обучения с удобством обучения из дома. Личные уроки доступны для учеников в районе Амазара.'
+      },
+      {
+        question: 'Какой метод обучения вы используете?',
+        answer: 'Мы используем спокойный, вдумчивый подход, который фокусируется на построении подлинного понимания, а не на запоминании. Наш метод сочетает разговорную практику, интерактивные занятия и персонализированные материалы, основанные на интересах каждого ученика. Мы верим в создание поддерживающей среды без давления, где ошибки рассматриваются как возможности для обучения.'
+      },
+      {
+        question: 'Как записаться на урок?',
+        answer: 'Записаться легко! Просто свяжитесь с нами через WhatsApp по номеру +79145251745 или используйте кнопку "Начать Путь" на нашем сайте. Мы обсудим потребности вашего ребёнка, найдём удобное время и организуем пробный урок, чтобы вы могли увидеть, подходит ли наш подход.'
+      },
+      {
+        question: 'Предлагаете ли вы пробный урок?',
+        answer: 'Да! Мы предлагаем вводный пробный урок, чтобы вы и ваш ребёнок могли лично познакомиться с нашим стилем преподавания. Это позволяет нам оценить текущий уровень вашего ребёнка, понять его цели обучения и определить лучший подход для его успеха. Свяжитесь с нами, чтобы запланировать пробный урок.'
+      },
+      {
+        question: 'Какие материалы нужны для уроков?',
+        answer: 'Для онлайн-уроков вам понадобится компьютер или планшет со стабильным интернет-соединением, веб-камера и микрофон. Мы предоставляем все учебные материалы в цифровом виде. Для личных уроков мы приносим всё необходимое. Иногда мы можем предложить дополнительные материалы, такие как рабочие тетради или книги для чтения, в зависимости от прогресса вашего ребёнка.'
+      },
+      {
+        question: 'Как вы отслеживаете прогресс?',
+        answer: 'Мы отслеживаем прогресс через регулярные оценки, наблюдение во время уроков и постоянное общение с родителями. Вы будете получать периодические обновления о развитии вашего ребёнка, областях силы и областях для улучшения. Мы верим в празднование маленьких побед и поддержание открытого общения о пути обучения вашего ребёнка.'
+      },
+      {
+        question: 'Что если мой ребёнок пропустит урок?',
+        answer: 'Мы понимаем, что жизнь случается! Если вам нужно отменить или перенести урок, пожалуйста, сообщите нам как можно скорее. Мы вместе найдём подходящее альтернативное время. Наша политика отмены и переноса будет обсуждена, когда вы забронируете свой первый урок.'
+      },
+      {
+        question: 'Могут ли родители присутствовать на уроках?',
+        answer: 'Для младших детей или во время первых нескольких уроков родители могут присутствовать, если это помогает ребёнку чувствовать себя более комфортно. Однако мы обнаружили, что дети часто участвуют более свободно, когда родители наблюдают на расстоянии. Мы рады обсудить, что лучше всего подходит для вашего ребёнка, и предоставлять регулярные обновления о его прогрессе.'
+      },
+      {
+        question: 'Чем StillWell отличается от других программ английского?',
+        answer: 'StillWell фокусируется на спокойном, осознанном обучении, а не на спешке через материал. Мы предоставляем персонализированное индивидуальное внимание, адаптируемся к темпу каждого ребёнка и создаём уроки вокруг их интересов. Наш подход подчёркивает понимание над запоминанием, уверенность над совершенством и подлинное общение над результатами тестов.'
+      },
+      {
+        question: 'Как быстро мой ребёнок увидит результаты?',
+        answer: 'Каждый ребёнок учится в своём темпе, и мы празднуем прогресс, а не скорость. Большинство учеников начинают проявлять повышенную уверенность и улучшенные коммуникативные навыки в течение первых нескольких недель. Значительные улучшения в словарном запасе, грамматике и беглости обычно становятся очевидными после 2-3 месяцев последовательных уроков. Помните, устойчивое обучение требует времени, и мы здесь для этого путешествия.'
+      },
+    ]
+  }
+};
