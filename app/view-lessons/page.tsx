@@ -165,17 +165,17 @@ export default function ViewLessons() {
       </header>
 
       {/* Hero */}
-      <section className="px-6 py-16 md:py-24">
+      <section className="px-4 sm:px-6 py-12 sm:py-16 md:py-24">
         <div className="max-w-4xl mx-auto text-center space-y-6">
-          <h1 className="text-5xl md:text-7xl font-serif font-bold text-charcoal leading-tight">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl font-serif font-bold text-charcoal leading-tight px-2 break-words">
             {t.title}
             <br />
-            <span className="text-sage">{t.titleAccent}</span>
+            <span className="text-sage inline-block" style={{ hyphens: 'auto', wordBreak: 'keep-all' }}>{t.titleAccent}</span>
           </h1>
-          <p className="text-xl text-charcoal/70 max-w-2xl mx-auto">
+          <p className="text-lg sm:text-xl text-charcoal/70 max-w-2xl mx-auto break-words px-2">
             {t.subtitle}
           </p>
-          <div className="inline-block px-6 py-2 bg-sage/20 rounded-full text-sage font-medium mt-4">
+          <div className="inline-block px-4 sm:px-6 py-2 bg-sage/20 rounded-full text-sage font-medium mt-4 text-sm sm:text-base break-words">
             {t.badge}
           </div>
         </div>
