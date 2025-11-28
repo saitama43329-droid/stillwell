@@ -81,8 +81,7 @@ export default function RootLayout({
               "telephone": "+79145251745",
               "address": {
                 "@type": "PostalAddress",
-                "streetAddress": "Depovskaya street 12",
-                "addressLocality": "Amazar village",
+                "addressLocality": "Amazar",
                 "addressRegion": "Mogochinsky district, Zabaykalsky Krai",
                 "addressCountry": "RU"
               },
