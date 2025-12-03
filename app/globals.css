@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-cream text-charcoal;
+  }
+  
+  html {
+    @apply overflow-x-hidden;
+  }
+  
+  body {
+    @apply overflow-x-hidden;
+  }
+  
+  * {
+    @apply box-border;
+  }
+  
+  /* Extra small devices (Galaxy Z Fold, iPhone SE 1st gen) */
+  @media (max-width: 360px) {
+    html {
+      font-size: 14px;
+    }
+  }
+  
+  /* Ensure all text wraps properly on small screens */
+  @media (max-width: 440px) {
+    h1, h2, h3, h4, h5, h6, p, span, a, li {
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+      hyphens: auto;
+    }
+  }
+}

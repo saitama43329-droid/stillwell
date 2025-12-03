@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <!-- Homepage -->
+  <url>
+    <loc>https://stillwell-english.com/</loc>
+    <lastmod>2025-11-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stillwell-english.com/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://stillwell-english.com/" />
+  </url>
+
+  <!-- About Page -->
+  <url>
+    <loc>https://stillwell-english.com/about</loc>
+    <lastmod>2025-11-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stillwell-english.com/about" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://stillwell-english.com/about" />
+  </url>
+
+  <!-- Lessons Page -->
+  <url>
+    <loc>https://stillwell-english.com/lessons</loc>
+    <lastmod>2025-11-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stillwell-english.com/lessons" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://stillwell-english.com/lessons" />
+  </url>
+
+  <!-- View Lessons Page -->
+  <url>
+    <loc>https://stillwell-english.com/view-lessons</loc>
+    <lastmod>2025-11-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stillwell-english.com/view-lessons" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://stillwell-english.com/view-lessons" />
+  </url>
+
+  <!-- Start Journey Page -->
+  <url>
+    <loc>https://stillwell-english.com/start-journey</loc>
+    <lastmod>2025-11-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stillwell-english.com/start-journey" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://stillwell-english.com/start-journey" />
+  </url>
+
+  <!-- Privacy Policy -->
+  <url>
+    <loc>https://stillwell-english.com/privacy</loc>
+    <lastmod>2025-11-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stillwell-english.com/privacy" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://stillwell-english.com/privacy" />
+  </url>
+
+  <!-- Terms of Service -->
+  <url>
+    <loc>https://stillwell-english.com/terms</loc>
+    <lastmod>2025-11-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stillwell-english.com/terms" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://stillwell-english.com/terms" />
+  </url>
+
+</urlset>
