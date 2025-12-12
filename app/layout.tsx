@@ -51,6 +51,44 @@ export const metadata: Metadata = {
   },
 };
 
+// Critical inline CSS for Russia - ensures colors load even if CDN is blocked
+const criticalCSS = `
+  :root {
+    --color-cream: #F5F1E8;
+    --color-sage: #8B9D83;
+    --color-charcoal: #2C2C2C;
+    --color-terracotta: #C97D60;
+    --color-warmWhite: #FDFBF7;
+  }
+  html, body {
+    margin: 0;
+    padding: 0;
+    background-color: #F5F1E8 !important;
+    color: #2C2C2C !important;
+    font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+  * { box-sizing: border-box; }
+  .bg-cream { background-color: #F5F1E8 !important; }
+  .bg-warmWhite { background-color: #FDFBF7 !important; }
+  .bg-sage { background-color: #8B9D83 !important; }
+  .bg-charcoal { background-color: #2C2C2C !important; }
+  .bg-terracotta { background-color: #C97D60 !important; }
+  .text-cream { color: #F5F1E8 !important; }
+  .text-warmWhite { color: #FDFBF7 !important; }
+  .text-sage { color: #8B9D83 !important; }
+  .text-charcoal { color: #2C2C2C !important; }
+  .text-terracotta { color: #C97D60 !important; }
+  .border-sage { border-color: #8B9D83 !important; }
+  .border-charcoal { border-color: #2C2C2C !important; }
+  .font-serif { font-family: Georgia, Cambria, 'Times New Roman', serif !important; }
+  .font-sans { font-family: Inter, system-ui, sans-serif !important; }
+  @media (max-width: 360px) { html { font-size: 13px; } }
+  @media (max-width: 320px) { html { font-size: 12px; } }
+`;
+
 export default function RootLayout({
   children,
 }: {
@@ -59,13 +97,17 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
         <link rel="icon" href="/logoicon.png" type="image/png" />
         <link rel="apple-touch-icon" href="/logoicon.png" />
         <link rel="manifest" href="/manifest.json" />
         <meta name="theme-color" content="#8B9D83" />
+        {/* Critical CSS inlined for Russia - loads before external CSS */}
+        <style dangerouslySetInnerHTML={{ __html: criticalCSS }} />
+        {/* Preload hint for CSS */}
+        <link rel="preconnect" href="/" />
       </head>
-      <body className="font-sans antialiased">
+      <body className="font-sans antialiased" style={{ backgroundColor: '#F5F1E8', color: '#2C2C2C' }}>
         <LanguageProvider>{children}</LanguageProvider>
         <script
           type="application/ld+json"

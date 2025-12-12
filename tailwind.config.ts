@@ -8,6 +8,14 @@ const config: Config = {
     "./lib/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    screens: {
+      'xs': '360px',   // Galaxy Z Fold open, small phones
+      'sm': '640px',   // Default Tailwind
+      'md': '768px',   // Default Tailwind
+      'lg': '1024px',  // Default Tailwind
+      'xl': '1280px',  // Default Tailwind
+      '2xl': '1536px', // Default Tailwind
+    },
     extend: {
       colors: {
         cream: "#F5F1E8",

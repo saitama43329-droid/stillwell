@@ -84,7 +84,10 @@ function MainTypingAnimation({ phrases }: { phrases: string[] }) {
   }, [text, isDeleting, phraseIndex, delta, phrases]);
 
   return (
-    <div className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-serif text-sage h-full flex items-center justify-center text-center max-w-full overflow-hidden">
+    <div 
+      className="text-sm xs:text-base sm:text-xl md:text-2xl lg:text-3xl font-serif h-full flex items-center justify-center text-center max-w-full overflow-hidden px-1"
+      style={{ color: '#8B9D83' }}
+    >
       <span className="truncate">{text}</span>
       <span className="animate-pulse ml-1 flex-shrink-0">|</span>
     </div>
@@ -146,14 +149,14 @@ export default function Home() {
   return (
     <main className="min-h-screen flex flex-col">
       {/* Header */}
-      <header className="px-6 py-5 md:px-12 lg:px-16 bg-warmWhite/95 backdrop-blur-sm sticky top-0 z-50 border-b border-charcoal/10">
+      <header className="px-3 xs:px-4 sm:px-6 py-3 sm:py-5 md:px-12 lg:px-16 backdrop-blur-sm sticky top-0 z-50" style={{ backgroundColor: 'rgba(253,251,247,0.95)', borderBottom: '1px solid rgba(44,44,44,0.1)' }}>
         <nav className="max-w-7xl mx-auto flex justify-between items-center">
-          <div className="text-2xl md:text-3xl font-serif font-bold text-charcoal">
+          <div className="text-lg xs:text-xl sm:text-2xl md:text-3xl font-serif font-bold" style={{ color: '#2C2C2C' }}>
             StillWell
           </div>
           
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-6 text-sm font-medium text-charcoal">
+          <div className="hidden md:flex items-center gap-6 text-sm font-medium" style={{ color: '#2C2C2C' }}>
             <Link href="/about" className="transition-all duration-200">
               {nav.about}
             </Link>
@@ -167,7 +170,7 @@ export default function Home() {
           </div>
 
           {/* Mobile Menu Button & Language Switcher */}
-          <div className="flex md:hidden items-center gap-4">
+          <div className="flex md:hidden items-center gap-2 xs:gap-3 sm:gap-4">
             <LanguageSwitcher />
             <button
               onClick={() => {
@@ -176,10 +179,11 @@ export default function Home() {
                   menu.classList.toggle('translate-x-full');
                 }
               }}
-              className="p-2 text-charcoal transition-colors"
+              className="p-1.5 sm:p-2 transition-colors min-w-[44px] min-h-[44px] flex items-center justify-center"
+              style={{ color: '#2C2C2C' }}
               aria-label="Toggle menu"
             >
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
               </svg>
             </button>
@@ -257,39 +261,39 @@ export default function Home() {
       </header>
 
       {/* Hero Section */}
-      <section className="flex-1 flex items-center justify-center px-6 py-16 md:py-24 bg-gradient-to-b from-cream to-warmWhite/30">
-        <div className="max-w-4xl mx-auto text-center space-y-8 w-full">
+      <section className="flex-1 flex items-center justify-center px-3 xs:px-4 sm:px-6 py-10 sm:py-16 md:py-24" style={{ background: 'linear-gradient(to bottom, #F5F1E8, rgba(253,251,247,0.3))' }}>
+        <div className="max-w-4xl mx-auto text-center space-y-5 sm:space-y-8 w-full">
           {/* Logo */}
-          <div className="flex justify-center mb-6">
+          <div className="flex justify-center mb-4 sm:mb-6">
             <img 
               src="/logoicon.png" 
               alt="StillWell Logo" 
-              className="w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 object-contain drop-shadow-2xl"
+              className="w-16 h-16 xs:w-20 xs:h-20 sm:w-32 sm:h-32 md:w-40 md:h-40 object-contain drop-shadow-2xl"
             />
           </div>
           
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-serif font-bold text-charcoal leading-tight px-2">
+          <h1 className="text-2xl xs:text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-serif font-bold leading-tight px-1 sm:px-2" style={{ color: '#2C2C2C' }}>
             {t.title}
             <br />
-            <span className="text-sage inline-block" style={{ hyphens: 'auto', wordBreak: 'keep-all' }}>{t.titleAccent}</span>
+            <span className="inline-block" style={{ color: '#8B9D83', hyphens: 'auto', wordBreak: 'keep-all' }}>{t.titleAccent}</span>
           </h1>
 
-          <div className="h-20 flex items-center justify-center w-full">
+          <div className="h-14 sm:h-20 flex items-center justify-center w-full px-2">
             {mounted && <MainTypingAnimation phrases={t.typingPhrases} />}
           </div>
 
-          <p className="text-lg md:text-xl text-charcoal/70 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-sm xs:text-base sm:text-lg md:text-xl max-w-2xl mx-auto leading-relaxed px-2" style={{ color: 'rgba(44,44,44,0.7)' }}>
             {t.subtitle}
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8 w-full max-w-md sm:max-w-2xl mx-auto">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center pt-4 sm:pt-8 w-full max-w-sm sm:max-w-2xl mx-auto px-2">
             <Link href="/start-journey" className="w-full sm:w-auto">
-              <button className="w-full sm:w-auto px-10 py-5 bg-terracotta text-warmWhite rounded-full text-lg font-semibold hover:bg-terracotta/90 transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1 active:scale-95">
+              <button className="w-full sm:w-auto px-6 xs:px-8 sm:px-10 py-3 xs:py-4 sm:py-5 rounded-full text-sm xs:text-base sm:text-lg font-semibold transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1 active:scale-95" style={{ backgroundColor: '#C97D60', color: '#FDFBF7' }}>
                 {t.startJourney}
               </button>
             </Link>
             <Link href="/view-lessons" className="w-full sm:w-auto">
-              <button className="w-full sm:w-auto px-10 py-5 bg-warmWhite border-2 border-charcoal text-charcoal rounded-full text-lg font-semibold hover:bg-charcoal hover:text-warmWhite transition-all duration-300 shadow-lg hover:shadow-xl active:scale-95">
+              <button className="w-full sm:w-auto px-6 xs:px-8 sm:px-10 py-3 xs:py-4 sm:py-5 border-2 rounded-full text-sm xs:text-base sm:text-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl active:scale-95" style={{ backgroundColor: '#FDFBF7', borderColor: '#2C2C2C', color: '#2C2C2C' }}>
                 {t.viewLessons}
               </button>
             </Link>
@@ -298,18 +302,18 @@ export default function Home() {
       </section>
 
       {/* Features Section */}
-      <section className="px-4 sm:px-6 py-12 sm:py-20 md:py-24 bg-warmWhite">
+      <section className="px-3 xs:px-4 sm:px-6 py-10 sm:py-16 md:py-24" style={{ backgroundColor: '#FDFBF7' }}>
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-center mb-12 sm:mb-16 text-charcoal break-words">
+          <h2 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-center mb-8 sm:mb-12 md:mb-16 break-words px-2" style={{ color: '#2C2C2C' }}>
             {t.whyTitle}
           </h2>
-          <div className="grid md:grid-cols-3 gap-8 sm:gap-10 md:gap-12">
-            <div className="text-center space-y-4 px-2">
-              <div className="w-16 h-16 mx-auto bg-sage/20 rounded-full flex items-center justify-center">
+          <div className="grid md:grid-cols-3 gap-6 sm:gap-8 md:gap-12">
+            <div className="text-center space-y-3 sm:space-y-4 px-2">
+              <div className="w-12 h-12 sm:w-16 sm:h-16 mx-auto rounded-full flex items-center justify-center" style={{ backgroundColor: 'rgba(139,157,131,0.2)' }}>
                 <svg
-                  className="w-8 h-8 text-sage"
+                  className="w-6 h-6 sm:w-8 sm:h-8"
                   fill="none"
-                  stroke="currentColor"
+                  stroke="#8B9D83"
                   viewBox="0 0 24 24"
                 >
                   <path
@@ -320,20 +324,20 @@ export default function Home() {
                   />
                 </svg>
               </div>
-              <h3 className="text-lg sm:text-xl font-serif font-bold text-charcoal break-words">
+              <h3 className="text-base sm:text-lg md:text-xl font-serif font-bold break-words" style={{ color: '#2C2C2C' }}>
                 {t.thoughtfulTitle}
               </h3>
-              <p className="text-sm sm:text-base text-charcoal/70 break-words">
+              <p className="text-xs sm:text-sm md:text-base break-words" style={{ color: 'rgba(44,44,44,0.7)' }}>
                 {t.thoughtfulDesc}
               </p>
             </div>
 
-            <div className="text-center space-y-4 px-2">
-              <div className="w-16 h-16 mx-auto bg-terracotta/20 rounded-full flex items-center justify-center">
+            <div className="text-center space-y-3 sm:space-y-4 px-2">
+              <div className="w-12 h-12 sm:w-16 sm:h-16 mx-auto rounded-full flex items-center justify-center" style={{ backgroundColor: 'rgba(201,125,96,0.2)' }}>
                 <svg
-                  className="w-8 h-8 text-terracotta"
+                  className="w-6 h-6 sm:w-8 sm:h-8"
                   fill="none"
-                  stroke="currentColor"
+                  stroke="#C97D60"
                   viewBox="0 0 24 24"
                 >
                   <path
@@ -344,20 +348,20 @@ export default function Home() {
                   />
                 </svg>
               </div>
-              <h3 className="text-lg sm:text-xl font-serif font-bold text-charcoal break-words">
+              <h3 className="text-base sm:text-lg md:text-xl font-serif font-bold break-words" style={{ color: '#2C2C2C' }}>
                 {t.calmTitle}
               </h3>
-              <p className="text-sm sm:text-base text-charcoal/70 break-words">
+              <p className="text-xs sm:text-sm md:text-base break-words" style={{ color: 'rgba(44,44,44,0.7)' }}>
                 {t.calmDesc}
               </p>
             </div>
 
-            <div className="text-center space-y-4 px-2">
-              <div className="w-16 h-16 mx-auto bg-sage/20 rounded-full flex items-center justify-center">
+            <div className="text-center space-y-3 sm:space-y-4 px-2">
+              <div className="w-12 h-12 sm:w-16 sm:h-16 mx-auto rounded-full flex items-center justify-center" style={{ backgroundColor: 'rgba(139,157,131,0.2)' }}>
                 <svg
-                  className="w-8 h-8 text-sage"
+                  className="w-6 h-6 sm:w-8 sm:h-8"
                   fill="none"
-                  stroke="currentColor"
+                  stroke="#8B9D83"
                   viewBox="0 0 24 24"
                 >
                   <path
@@ -368,10 +372,10 @@ export default function Home() {
                   />
                 </svg>
               </div>
-              <h3 className="text-lg sm:text-xl font-serif font-bold text-charcoal break-words">
+              <h3 className="text-base sm:text-lg md:text-xl font-serif font-bold break-words" style={{ color: '#2C2C2C' }}>
                 {t.personalTitle}
               </h3>
-              <p className="text-sm sm:text-base text-charcoal/70 break-words">
+              <p className="text-xs sm:text-sm md:text-base break-words" style={{ color: 'rgba(44,44,44,0.7)' }}>
                 {t.personalDesc}
               </p>
             </div>
@@ -455,27 +459,27 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="px-6 py-12 bg-charcoal text-warmWhite">
-        <div className="max-w-7xl mx-auto text-center space-y-4">
-          <div className="text-2xl font-serif font-bold">StillWell</div>
-          <p className="text-base text-warmWhite/70">
+      <footer className="px-3 xs:px-4 sm:px-6 py-8 sm:py-12" style={{ backgroundColor: '#2C2C2C', color: '#FDFBF7' }}>
+        <div className="max-w-7xl mx-auto text-center space-y-3 sm:space-y-4">
+          <div className="text-xl sm:text-2xl font-serif font-bold">StillWell</div>
+          <p className="text-sm sm:text-base" style={{ color: 'rgba(253,251,247,0.7)' }}>
             {t.footerTagline}
           </p>
-          <p className="text-sm text-warmWhite/50">
+          <p className="text-xs sm:text-sm" style={{ color: 'rgba(253,251,247,0.5)' }}>
             {t.footerTeacher}
           </p>
-          <div className="pt-4 pb-4 border-t border-warmWhite/10 mt-4">
-            <p className="text-xs text-warmWhite/40 mb-2">{t.addressLabel}</p>
-            <p className="text-sm text-warmWhite/60">
+          <div className="pt-3 sm:pt-4 pb-3 sm:pb-4 mt-3 sm:mt-4" style={{ borderTop: '1px solid rgba(253,251,247,0.1)' }}>
+            <p className="text-xs mb-2" style={{ color: 'rgba(253,251,247,0.4)' }}>{t.addressLabel}</p>
+            <p className="text-xs sm:text-sm px-2" style={{ color: 'rgba(253,251,247,0.6)' }}>
               {t.footerAddress}
             </p>
           </div>
-          <div className="flex flex-wrap justify-center gap-3 sm:gap-6 pt-2 text-xs px-4">
-            <Link href="/privacy" className="transition-colors text-warmWhite/50 break-words text-center">
+          <div className="flex flex-wrap justify-center gap-2 sm:gap-6 pt-2 text-xs px-2">
+            <Link href="/privacy" className="transition-colors break-words text-center" style={{ color: 'rgba(253,251,247,0.5)' }}>
               {t.privacyPolicy}
             </Link>
-            <span className="text-warmWhite/30 hidden sm:inline">•</span>
-            <Link href="/terms" className="transition-colors text-warmWhite/50 break-words text-center">
+            <span className="hidden sm:inline" style={{ color: 'rgba(253,251,247,0.3)' }}>•</span>
+            <Link href="/terms" className="transition-colors break-words text-center" style={{ color: 'rgba(253,251,247,0.5)' }}>
               {t.termsOfService}
             </Link>
           </div>
