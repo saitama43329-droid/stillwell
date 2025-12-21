@@ -1,50 +1,56 @@
-# Technology Stack
+# StillWell - Technical Stack
 
-## Framework & Core
-
-- **Next.js 14**: React framework with App Router
-- **React 18**: UI library with hooks-based state management
-- **TypeScript 5**: Type-safe development
+## Framework & Runtime
+- Next.js 14 (App Router)
+- React 18
+- TypeScript 5 (strict mode)
+- Node.js (see .nvmrc for version)
 
 ## Styling
+- Tailwind CSS 3.4
+- Self-hosted fonts: Inter (sans) + Source Serif (serif) in `/public/fonts/`
+- Custom color tokens: cream, sage, charcoal, terracotta, warmWhite
+- Custom breakpoints optimized for all devices (xxs: 280px to 4xl: 1536px)
+- Critical CSS inlined in layout for Russia CDN reliability
+- Self-hosted fonts and icons (no external CDN dependencies)
 
-- **Tailwind CSS 3.4**: Utility-first CSS framework
-- **PostCSS**: CSS processing
-- **Autoprefixer**: Browser compatibility
+## Design System
+- iOS-inspired tactile shadows: `shadow-ios-sm/md/lg/xl`
+- iOS border radius: `rounded-ios-sm/md/lg/xl/2xl`
+- Fluid typography: `text-fluid-xs` through `text-fluid-6xl`
+- Premium transitions: `transition-tactile`, `press-effect`
+- Glass morphism header: `.glass` class
 
-## Build System
+## Build & Development
 
-- **Node.js**: Runtime environment
-- **npm**: Package manager
-
-## Common Commands
-
+### Commands
 ```bash
-# Development
-npm run dev          # Start dev server on http://localhost:3000
-npm run dev -H 0.0.0.0  # Start dev server accessible on network
-
-# Production
-npm run build        # Build for production
-npm start            # Start production server
-
-# Code Quality
-npm run lint         # Run ESLint
-
-# Quick Start (Windows)
-run.bat              # Install dependencies and start dev server
+npm run dev      # Start dev server (binds to 0.0.0.0)
+npm run build    # Production build
+npm run start    # Start production server
+npm run lint     # ESLint
 ```
 
-## Deployment
+### Quick Start
+```bash
+run.bat          # Windows: installs deps and starts dev server
+```
 
-- **Platform**: Netlify
-- **Config**: netlify.toml in root
-- **Build command**: `npm run build`
-- **Output directory**: `.next`
+## Path Aliases
+- `@/*` maps to project root (e.g., `@/lib/translations`)
+
+## Deployment
+- Configured for Vercel (vercel.json)
+- Netlify support (netlify.toml)
+- Static image optimization disabled for compatibility
 
 ## Key Dependencies
+- No external UI libraries - custom components only
+- No state management library - React Context for language
+- No database - static content with translations
 
-- No external UI libraries (custom components)
-- No state management libraries (React Context API)
-- No routing libraries (Next.js built-in)
-- No animation libraries (CSS transitions and custom React hooks)
+## Configuration Files
+- `next.config.js` - Next.js config with security headers
+- `tailwind.config.ts` - Custom theme colors and fonts
+- `tsconfig.json` - TypeScript with strict mode
+- `postcss.config.mjs` - PostCSS with Tailwind

@@ -1,30 +1,26 @@
-# Product Overview
+# StillWell - Product Overview
 
-StillWell is a premium English learning platform for children aged 13 and below, taught by Ksenia Volchemateva in Amazar, Russia (Zabaykalsky Krai).
+StillWell is a premium English tutoring website for children aged 13 and below, operated by Ksenia Volchemateva in Amazar, Zabaykalsky Krai, Russia.
 
 ## Core Value Proposition
-
-- **Calm, thoughtful learning**: Focus on quality over speed with a mindful approach
-- **Personal one-on-one instruction**: Individual attention tailored to each student's needs
-- **Premium experience**: Nostalgic, calm aesthetics with a focus on depth and clarity
+- Personal one-on-one English lessons
+- Calm, thoughtful learning environment
+- Focus on confidence building over speed
 
 ## Target Audience
-
-- Primary: Children and early teens (13 and below)
-- Secondary: Parents seeking personalized English instruction for their children
-- Geographic focus: Zabaykalsky Krai, Russia, with bilingual support (English/Russian)
+- Children and early teens (13 and below)
+- Parents seeking quality English education
+- Located primarily in Russia (Zabaykalsky Krai region)
 
 ## Key Features
-
-- Bilingual interface (English/Russian)
-- Multiple lesson formats (trial, standard, extended)
-- WhatsApp-based contact and scheduling
-- Responsive design for all devices
-- SEO-optimized for local discovery
+- Bilingual support (English/Russian)
+- WhatsApp-based booking and communication
+- Blog with English learning tips
+- Lesson information and pricing inquiry
 
 ## Brand Identity
-
-- **Design philosophy**: Premium, calm, nostalgic
-- **Color palette**: Cream, sage, charcoal, terracotta, warm white
-- **Typography**: Serif fonts for classic, trustworthy feel
-- **Tone**: Supportive, patient, encouraging, professional yet warm
+- Name meaning: "In stillness, we learn well"
+- Aesthetic: Premium, calm, nostalgic, tactile (iOS-inspired)
+- Color palette: Cream, Sage, Charcoal, Terracotta, Warm White
+- Typography: Self-hosted Inter (body) + Source Serif (headings)
+- All assets self-hosted (fonts, icons, images) for Russia reliability

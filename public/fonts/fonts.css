@@ -1,0 +1,62 @@
+/* 100% Self-hosted fonts - no external dependencies */
+/* Inter (iOS SF Pro alternative) + Source Serif (premium serif) */
+
+/* Inter - Sans-serif (Regular) */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/Inter-Regular.woff2') format('woff2');
+}
+
+/* Inter - Sans-serif (Medium) */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('/fonts/Inter-Medium.woff2') format('woff2');
+}
+
+/* Inter - Sans-serif (SemiBold) */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('/fonts/Inter-SemiBold.woff2') format('woff2');
+}
+
+/* Inter - Sans-serif (Bold) */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/fonts/Inter-Bold.woff2') format('woff2');
+}
+
+/* Source Serif - Serif (Regular) */
+@font-face {
+  font-family: 'Source Serif';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/SourceSerif-Regular.woff2') format('woff2');
+}
+
+/* Source Serif - Serif (Bold) */
+@font-face {
+  font-family: 'Source Serif';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/fonts/SourceSerif-Bold.woff2') format('woff2');
+}
+
+/* CSS Variables for font stacks */
+:root {
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-serif: 'Source Serif', Georgia, serif;
+}

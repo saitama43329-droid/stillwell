@@ -51,7 +51,8 @@ export const metadata: Metadata = {
   },
 };
 
-// Critical inline CSS for Russia - ensures colors load even if CDN is blocked
+// Critical inline CSS for Russia - ensures colors and fonts load even if CDN is blocked
+// Uses self-hosted Inter + Source Serif fonts
 const criticalCSS = `
   :root {
     --color-cream: #F5F1E8;
@@ -59,18 +60,30 @@ const criticalCSS = `
     --color-charcoal: #2C2C2C;
     --color-terracotta: #C97D60;
     --color-warmWhite: #FDFBF7;
+    --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-serif: 'Source Serif', Georgia, serif;
+    --shadow-soft: 0 2px 8px rgba(44, 44, 44, 0.06), 0 1px 2px rgba(44, 44, 44, 0.04);
+    --shadow-medium: 0 4px 16px rgba(44, 44, 44, 0.08), 0 2px 4px rgba(44, 44, 44, 0.04);
+    --radius-lg: 16px;
+    --radius-xl: 20px;
   }
   html, body {
     margin: 0;
     padding: 0;
     background-color: #F5F1E8 !important;
     color: #2C2C2C !important;
-    font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
     overflow-x: hidden;
+    letter-spacing: -0.01em;
   }
   * { box-sizing: border-box; }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-serif);
+    letter-spacing: -0.02em;
+  }
   .bg-cream { background-color: #F5F1E8 !important; }
   .bg-warmWhite { background-color: #FDFBF7 !important; }
   .bg-sage { background-color: #8B9D83 !important; }
@@ -83,10 +96,18 @@ const criticalCSS = `
   .text-terracotta { color: #C97D60 !important; }
   .border-sage { border-color: #8B9D83 !important; }
   .border-charcoal { border-color: #2C2C2C !important; }
-  .font-serif { font-family: Georgia, Cambria, 'Times New Roman', serif !important; }
-  .font-sans { font-family: Inter, system-ui, sans-serif !important; }
-  @media (max-width: 360px) { html { font-size: 13px; } }
-  @media (max-width: 320px) { html { font-size: 12px; } }
+  .font-serif { font-family: var(--font-serif) !important; }
+  .font-sans { font-family: var(--font-sans) !important; }
+  /* Ultra-responsive font scaling */
+  @media (max-width: 280px) { html { font-size: 11px; } }
+  @media (min-width: 281px) and (max-width: 320px) { html { font-size: 12px; } }
+  @media (min-width: 321px) and (max-width: 360px) { html { font-size: 13px; } }
+  @media (min-width: 361px) and (max-width: 390px) { html { font-size: 14px; } }
+  @media (min-width: 391px) and (max-width: 430px) { html { font-size: 15px; } }
+  /* iOS touch targets */
+  @media (pointer: coarse) {
+    button, a, [role="button"] { min-height: 44px; }
+  }
 `;
 
 export default function RootLayout({
@@ -97,15 +118,18 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover" />
         <link rel="icon" href="/logoicon.png" type="image/png" />
         <link rel="apple-touch-icon" href="/logoicon.png" />
         <link rel="manifest" href="/manifest.json" />
         <meta name="theme-color" content="#8B9D83" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+        {/* Self-hosted fonts - preload for performance */}
+        <link rel="preload" href="/fonts/fonts.css" as="style" />
+        <link rel="stylesheet" href="/fonts/fonts.css" />
         {/* Critical CSS inlined for Russia - loads before external CSS */}
         <style dangerouslySetInnerHTML={{ __html: criticalCSS }} />
-        {/* Preload hint for CSS */}
-        <link rel="preconnect" href="/" />
       </head>
       <body className="font-sans antialiased" style={{ backgroundColor: '#F5F1E8', color: '#2C2C2C' }}>
         <LanguageProvider>{children}</LanguageProvider>
