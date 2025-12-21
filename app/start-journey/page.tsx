@@ -166,30 +166,30 @@ export default function StartJourney() {
       </section>
 
       {/* Steps Section */}
-      <section className="px-3 xs:px-4 sm:px-6 py-8 sm:py-12">
+      <section className="px-3 xs:px-4 sm:px-6 py-6 sm:py-10 md:py-12">
         <div className="max-w-5xl mx-auto">
-          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
+          <div className="flex flex-col gap-3 xs:gap-4 sm:gap-5 md:grid md:grid-cols-3 md:gap-6 lg:gap-8">
             {steps.map((step, index) => (
               <div
                 key={index}
                 onMouseEnter={() => setHoveredStep(index)}
                 onMouseLeave={() => setHoveredStep(null)}
-                className={`bg-warmWhite p-4 xs:p-6 sm:p-8 rounded-xl sm:rounded-2xl transition-all duration-300 ${
+                className={`bg-warmWhite p-3 xs:p-4 sm:p-5 md:p-6 lg:p-8 rounded-lg xs:rounded-xl sm:rounded-2xl transition-all duration-300 ${
                   hoveredStep === index
-                    ? "transform -translate-y-2 shadow-2xl"
-                    : "shadow-lg"
+                    ? "transform md:-translate-y-2 shadow-xl sm:shadow-2xl"
+                    : "shadow-md sm:shadow-lg"
                 }`}
               >
-                <div className="text-4xl xs:text-5xl sm:text-6xl mb-3 sm:mb-4 transition-transform duration-300 transform hover:scale-110">
+                <div className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl mb-2 sm:mb-3 md:mb-4 transition-transform duration-300 transform hover:scale-110">
                   {step.icon}
                 </div>
-                <div className="text-sage/50 text-xs sm:text-sm font-bold mb-1 sm:mb-2">
+                <div className="text-sage/50 text-[10px] xs:text-xs sm:text-sm font-bold mb-1 sm:mb-2">
                   {step.number}
                 </div>
-                <h3 className="text-lg xs:text-xl sm:text-2xl font-serif font-bold text-charcoal mb-2 sm:mb-3 break-words">
+                <h3 className="text-base xs:text-lg sm:text-xl md:text-2xl font-serif font-bold text-charcoal mb-1.5 sm:mb-2 md:mb-3 break-words">
                   {step.title}
                 </h3>
-                <p className="text-sm xs:text-base text-charcoal/70 break-words">{step.description}</p>
+                <p className="text-xs xs:text-sm sm:text-base text-charcoal/70 break-words leading-relaxed">{step.description}</p>
               </div>
             ))}
           </div>
@@ -256,48 +256,48 @@ export default function StartJourney() {
       </section>
 
       {/* Benefits Section */}
-      <section className="px-3 xs:px-4 sm:px-6 py-12 sm:py-16 md:py-20 bg-warmWhite">
+      <section className="px-3 xs:px-4 sm:px-6 py-8 sm:py-12 md:py-16 lg:py-20 bg-warmWhite">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-center mb-8 sm:mb-12 md:mb-16 text-charcoal break-words px-2">
+          <h2 className="text-lg xs:text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-serif font-bold text-center mb-5 sm:mb-8 md:mb-12 lg:mb-16 text-charcoal break-words px-2">
             {t.experienceTitle}
           </h2>
-          <div className="grid sm:grid-cols-2 gap-4 sm:gap-6 md:gap-8">
-            <div className="bg-cream p-4 xs:p-6 sm:p-8 rounded-xl sm:rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
-              <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🎯</div>
-              <h3 className="text-lg xs:text-xl sm:text-2xl font-serif font-bold text-charcoal mb-2 sm:mb-3 break-words">
+          <div className="flex flex-col gap-3 xs:gap-4 sm:gap-5 md:grid md:grid-cols-2 md:gap-6 lg:gap-8">
+            <div className="bg-cream p-3 xs:p-4 sm:p-5 md:p-6 lg:p-8 rounded-lg xs:rounded-xl sm:rounded-2xl shadow-md sm:shadow-lg hover:shadow-xl transition-shadow">
+              <div className="text-2xl xs:text-3xl sm:text-4xl mb-2 sm:mb-3 md:mb-4">🎯</div>
+              <h3 className="text-base xs:text-lg sm:text-xl md:text-2xl font-serif font-bold text-charcoal mb-1.5 sm:mb-2 md:mb-3 break-words">
                 {t.benefit1Title}
               </h3>
-              <p className="text-sm xs:text-base text-charcoal/70 break-words">
+              <p className="text-xs xs:text-sm sm:text-base text-charcoal/70 break-words leading-relaxed">
                 {t.benefit1Desc}
               </p>
             </div>
 
-            <div className="bg-cream p-4 xs:p-6 sm:p-8 rounded-xl sm:rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
-              <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">⏰</div>
-              <h3 className="text-lg xs:text-xl sm:text-2xl font-serif font-bold text-charcoal mb-2 sm:mb-3 break-words">
+            <div className="bg-cream p-3 xs:p-4 sm:p-5 md:p-6 lg:p-8 rounded-lg xs:rounded-xl sm:rounded-2xl shadow-md sm:shadow-lg hover:shadow-xl transition-shadow">
+              <div className="text-2xl xs:text-3xl sm:text-4xl mb-2 sm:mb-3 md:mb-4">⏰</div>
+              <h3 className="text-base xs:text-lg sm:text-xl md:text-2xl font-serif font-bold text-charcoal mb-1.5 sm:mb-2 md:mb-3 break-words">
                 {t.benefit2Title}
               </h3>
-              <p className="text-sm xs:text-base text-charcoal/70 break-words">
+              <p className="text-xs xs:text-sm sm:text-base text-charcoal/70 break-words leading-relaxed">
                 {t.benefit2Desc}
               </p>
             </div>
 
-            <div className="bg-cream p-4 xs:p-6 sm:p-8 rounded-xl sm:rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
-              <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">💬</div>
-              <h3 className="text-lg xs:text-xl sm:text-2xl font-serif font-bold text-charcoal mb-2 sm:mb-3 break-words">
+            <div className="bg-cream p-3 xs:p-4 sm:p-5 md:p-6 lg:p-8 rounded-lg xs:rounded-xl sm:rounded-2xl shadow-md sm:shadow-lg hover:shadow-xl transition-shadow">
+              <div className="text-2xl xs:text-3xl sm:text-4xl mb-2 sm:mb-3 md:mb-4">💬</div>
+              <h3 className="text-base xs:text-lg sm:text-xl md:text-2xl font-serif font-bold text-charcoal mb-1.5 sm:mb-2 md:mb-3 break-words">
                 {t.benefit3Title}
               </h3>
-              <p className="text-sm xs:text-base text-charcoal/70 break-words">
+              <p className="text-xs xs:text-sm sm:text-base text-charcoal/70 break-words leading-relaxed">
                 {t.benefit3Desc}
               </p>
             </div>
 
-            <div className="bg-cream p-4 xs:p-6 sm:p-8 rounded-xl sm:rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
-              <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📈</div>
-              <h3 className="text-lg xs:text-xl sm:text-2xl font-serif font-bold text-charcoal mb-2 sm:mb-3 break-words">
+            <div className="bg-cream p-3 xs:p-4 sm:p-5 md:p-6 lg:p-8 rounded-lg xs:rounded-xl sm:rounded-2xl shadow-md sm:shadow-lg hover:shadow-xl transition-shadow">
+              <div className="text-2xl xs:text-3xl sm:text-4xl mb-2 sm:mb-3 md:mb-4">📈</div>
+              <h3 className="text-base xs:text-lg sm:text-xl md:text-2xl font-serif font-bold text-charcoal mb-1.5 sm:mb-2 md:mb-3 break-words">
                 {t.benefit4Title}
               </h3>
-              <p className="text-sm xs:text-base text-charcoal/70 break-words">
+              <p className="text-xs xs:text-sm sm:text-base text-charcoal/70 break-words leading-relaxed">
                 {t.benefit4Desc}
               </p>
             </div>

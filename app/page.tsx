@@ -304,14 +304,14 @@ export default function Home() {
       {/* Features Section */}
       <section className="px-3 xs:px-4 sm:px-6 py-10 sm:py-16 md:py-24" style={{ backgroundColor: '#FDFBF7' }}>
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-center mb-8 sm:mb-12 md:mb-16 break-words px-2" style={{ color: '#2C2C2C' }}>
+          <h2 className="text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-center mb-6 sm:mb-10 md:mb-16 break-words px-2" style={{ color: '#2C2C2C' }}>
             {t.whyTitle}
           </h2>
-          <div className="grid md:grid-cols-3 gap-6 sm:gap-8 md:gap-12">
-            <div className="text-center space-y-3 sm:space-y-4 px-2">
-              <div className="w-12 h-12 sm:w-16 sm:h-16 mx-auto rounded-full flex items-center justify-center" style={{ backgroundColor: 'rgba(139,157,131,0.2)' }}>
+          <div className="flex flex-col gap-4 sm:gap-6 md:grid md:grid-cols-3 md:gap-8 lg:gap-12">
+            <div className="text-center space-y-2 sm:space-y-3 md:space-y-4 px-2 py-4 sm:py-0">
+              <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 mx-auto rounded-full flex items-center justify-center" style={{ backgroundColor: 'rgba(139,157,131,0.2)' }}>
                 <svg
-                  className="w-6 h-6 sm:w-8 sm:h-8"
+                  className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8"
                   fill="none"
                   stroke="#8B9D83"
                   viewBox="0 0 24 24"
@@ -324,18 +324,18 @@ export default function Home() {
                   />
                 </svg>
               </div>
-              <h3 className="text-base sm:text-lg md:text-xl font-serif font-bold break-words" style={{ color: '#2C2C2C' }}>
+              <h3 className="text-sm xs:text-base sm:text-lg md:text-xl font-serif font-bold break-words" style={{ color: '#2C2C2C' }}>
                 {t.thoughtfulTitle}
               </h3>
-              <p className="text-xs sm:text-sm md:text-base break-words" style={{ color: 'rgba(44,44,44,0.7)' }}>
+              <p className="text-xs sm:text-sm md:text-base break-words leading-relaxed" style={{ color: 'rgba(44,44,44,0.7)' }}>
                 {t.thoughtfulDesc}
               </p>
             </div>
 
-            <div className="text-center space-y-3 sm:space-y-4 px-2">
-              <div className="w-12 h-12 sm:w-16 sm:h-16 mx-auto rounded-full flex items-center justify-center" style={{ backgroundColor: 'rgba(201,125,96,0.2)' }}>
+            <div className="text-center space-y-2 sm:space-y-3 md:space-y-4 px-2 py-4 sm:py-0">
+              <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 mx-auto rounded-full flex items-center justify-center" style={{ backgroundColor: 'rgba(201,125,96,0.2)' }}>
                 <svg
-                  className="w-6 h-6 sm:w-8 sm:h-8"
+                  className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8"
                   fill="none"
                   stroke="#C97D60"
                   viewBox="0 0 24 24"
@@ -348,18 +348,18 @@ export default function Home() {
                   />
                 </svg>
               </div>
-              <h3 className="text-base sm:text-lg md:text-xl font-serif font-bold break-words" style={{ color: '#2C2C2C' }}>
+              <h3 className="text-sm xs:text-base sm:text-lg md:text-xl font-serif font-bold break-words" style={{ color: '#2C2C2C' }}>
                 {t.calmTitle}
               </h3>
-              <p className="text-xs sm:text-sm md:text-base break-words" style={{ color: 'rgba(44,44,44,0.7)' }}>
+              <p className="text-xs sm:text-sm md:text-base break-words leading-relaxed" style={{ color: 'rgba(44,44,44,0.7)' }}>
                 {t.calmDesc}
               </p>
             </div>
 
-            <div className="text-center space-y-3 sm:space-y-4 px-2">
-              <div className="w-12 h-12 sm:w-16 sm:h-16 mx-auto rounded-full flex items-center justify-center" style={{ backgroundColor: 'rgba(139,157,131,0.2)' }}>
+            <div className="text-center space-y-2 sm:space-y-3 md:space-y-4 px-2 py-4 sm:py-0">
+              <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 mx-auto rounded-full flex items-center justify-center" style={{ backgroundColor: 'rgba(139,157,131,0.2)' }}>
                 <svg
-                  className="w-6 h-6 sm:w-8 sm:h-8"
+                  className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8"
                   fill="none"
                   stroke="#8B9D83"
                   viewBox="0 0 24 24"
@@ -372,10 +372,10 @@ export default function Home() {
                   />
                 </svg>
               </div>
-              <h3 className="text-base sm:text-lg md:text-xl font-serif font-bold break-words" style={{ color: '#2C2C2C' }}>
+              <h3 className="text-sm xs:text-base sm:text-lg md:text-xl font-serif font-bold break-words" style={{ color: '#2C2C2C' }}>
                 {t.personalTitle}
               </h3>
-              <p className="text-xs sm:text-sm md:text-base break-words" style={{ color: 'rgba(44,44,44,0.7)' }}>
+              <p className="text-xs sm:text-sm md:text-base break-words leading-relaxed" style={{ color: 'rgba(44,44,44,0.7)' }}>
                 {t.personalDesc}
               </p>
             </div>
@@ -384,64 +384,64 @@ export default function Home() {
       </section>
 
       {/* FAQ Section */}
-      <section className="px-4 sm:px-6 py-12 sm:py-16 md:py-20 bg-gradient-to-b from-cream to-warmWhite border-t border-charcoal/10">
+      <section className="px-3 xs:px-4 sm:px-6 py-8 sm:py-12 md:py-16 lg:py-20 bg-gradient-to-b from-cream to-warmWhite border-t border-charcoal/10">
         <div className="max-w-2xl mx-auto">
           {/* Decorative top line */}
-          <div className="flex justify-center mb-8 sm:mb-10">
-            <div className="w-20 sm:w-24 h-1 bg-gradient-to-r from-sage via-terracotta to-sage rounded-full"></div>
+          <div className="flex justify-center mb-6 sm:mb-8 md:mb-10">
+            <div className="w-16 sm:w-20 md:w-24 h-1 bg-gradient-to-r from-sage via-terracotta to-sage rounded-full"></div>
           </div>
 
           {/* FAQ Card */}
           <Link href="/faq" className="group block">
-            <div className="bg-warmWhite rounded-3xl p-8 sm:p-10 md:p-12 shadow-2xl hover:shadow-3xl transition-all duration-500 border-2 border-charcoal/10 hover:border-sage/40 transform hover:-translate-y-2 active:scale-98">
-              <div className="flex flex-col items-center text-center space-y-5 sm:space-y-6">
+            <div className="bg-warmWhite rounded-2xl sm:rounded-3xl p-5 xs:p-6 sm:p-8 md:p-10 lg:p-12 shadow-xl sm:shadow-2xl hover:shadow-3xl transition-all duration-500 border-2 border-charcoal/10 hover:border-sage/40 transform hover:-translate-y-2 active:scale-98">
+              <div className="flex flex-col items-center text-center space-y-3 xs:space-y-4 sm:space-y-5 md:space-y-6">
                 {/* Icon */}
-                <div className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 bg-gradient-to-br from-sage/20 to-terracotta/20 rounded-3xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                  <span className="text-5xl sm:text-6xl md:text-7xl">❓</span>
+                <div className="w-14 h-14 xs:w-16 xs:h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-28 lg:h-28 bg-gradient-to-br from-sage/20 to-terracotta/20 rounded-2xl sm:rounded-3xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                  <span className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl">❓</span>
                 </div>
                 
                 {/* Title */}
-                <h3 className="text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-charcoal group-hover:text-sage transition-colors break-words leading-tight">
+                <h3 className="text-lg xs:text-xl sm:text-2xl md:text-3xl lg:text-4xl font-serif font-bold text-charcoal group-hover:text-sage transition-colors break-words leading-tight px-1">
                   {language === 'en' ? 'Frequently Asked Questions' : 'Часто Задаваемые Вопросы'}
                 </h3>
                 
                 {/* Description */}
-                <p className="text-base sm:text-lg md:text-xl text-charcoal/75 break-words leading-relaxed max-w-xl">
+                <p className="text-xs xs:text-sm sm:text-base md:text-lg lg:text-xl text-charcoal/75 break-words leading-relaxed max-w-xl px-1">
                   {language === 'en' 
                     ? 'Find answers to common questions about our English lessons, teaching methods, and scheduling' 
                     : 'Найдите ответы на распространённые вопросы о наших уроках английского, методах обучения и расписании'}
                 </p>
                 
                 {/* CTA Button */}
-                <div className="pt-4 sm:pt-6">
-                  <div className="inline-flex items-center gap-3 px-8 sm:px-10 py-4 sm:py-5 bg-gradient-to-r from-sage to-sage/90 text-warmWhite rounded-full text-base sm:text-lg font-semibold group-hover:from-sage/90 group-hover:to-sage transition-all duration-300 shadow-xl group-hover:shadow-2xl">
+                <div className="pt-2 xs:pt-3 sm:pt-4 md:pt-6">
+                  <div className="inline-flex items-center gap-2 sm:gap-3 px-5 xs:px-6 sm:px-8 md:px-10 py-2.5 xs:py-3 sm:py-4 md:py-5 bg-gradient-to-r from-sage to-sage/90 text-warmWhite rounded-full text-xs xs:text-sm sm:text-base md:text-lg font-semibold group-hover:from-sage/90 group-hover:to-sage transition-all duration-300 shadow-lg sm:shadow-xl group-hover:shadow-2xl">
                     <span>{language === 'en' ? 'View All Questions' : 'Посмотреть Все Вопросы'}</span>
-                    <svg className="w-5 h-5 sm:w-6 sm:h-6 group-hover:translate-x-2 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 group-hover:translate-x-2 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                     </svg>
                   </div>
                 </div>
 
                 {/* Quick Stats */}
-                <div className="pt-6 sm:pt-8 border-t border-charcoal/10 w-full">
-                  <div className="flex flex-wrap justify-center gap-6 sm:gap-8 text-center">
-                    <div className="space-y-1">
-                      <div className="text-2xl sm:text-3xl font-bold text-sage">12+</div>
-                      <div className="text-xs sm:text-sm text-charcoal/60 break-words">
+                <div className="pt-4 xs:pt-5 sm:pt-6 md:pt-8 border-t border-charcoal/10 w-full">
+                  <div className="flex flex-row justify-center gap-4 xs:gap-5 sm:gap-6 md:gap-8 text-center">
+                    <div className="space-y-0.5 sm:space-y-1">
+                      <div className="text-lg xs:text-xl sm:text-2xl md:text-3xl font-bold text-sage">12+</div>
+                      <div className="text-[10px] xs:text-xs sm:text-sm text-charcoal/60 break-words">
                         {language === 'en' ? 'Questions' : 'Вопросов'}
                       </div>
                     </div>
                     <div className="w-px bg-charcoal/10"></div>
-                    <div className="space-y-1">
-                      <div className="text-2xl sm:text-3xl font-bold text-terracotta">100%</div>
-                      <div className="text-xs sm:text-sm text-charcoal/60 break-words">
+                    <div className="space-y-0.5 sm:space-y-1">
+                      <div className="text-lg xs:text-xl sm:text-2xl md:text-3xl font-bold text-terracotta">100%</div>
+                      <div className="text-[10px] xs:text-xs sm:text-sm text-charcoal/60 break-words">
                         {language === 'en' ? 'Answered' : 'Отвечено'}
                       </div>
                     </div>
                     <div className="w-px bg-charcoal/10"></div>
-                    <div className="space-y-1">
-                      <div className="text-2xl sm:text-3xl font-bold text-sage">24/7</div>
-                      <div className="text-xs sm:text-sm text-charcoal/60 break-words">
+                    <div className="space-y-0.5 sm:space-y-1">
+                      <div className="text-lg xs:text-xl sm:text-2xl md:text-3xl font-bold text-sage">24/7</div>
+                      <div className="text-[10px] xs:text-xs sm:text-sm text-charcoal/60 break-words">
                         {language === 'en' ? 'Available' : 'Доступно'}
                       </div>
                     </div>
@@ -452,8 +452,8 @@ export default function Home() {
           </Link>
 
           {/* Decorative bottom line */}
-          <div className="flex justify-center mt-8 sm:mt-10">
-            <div className="w-16 sm:w-20 h-0.5 bg-sage/30 rounded-full"></div>
+          <div className="flex justify-center mt-6 sm:mt-8 md:mt-10">
+            <div className="w-12 sm:w-16 md:w-20 h-0.5 bg-sage/30 rounded-full"></div>
           </div>
         </div>
       </section>

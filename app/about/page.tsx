@@ -169,23 +169,23 @@ export default function About() {
             </div>
           </div>
 
-          <div className="grid sm:grid-cols-2 gap-4 sm:gap-6 md:gap-8">
-            <div className="bg-warmWhite p-4 xs:p-6 sm:p-8 rounded-xl sm:rounded-2xl shadow-lg">
-              <div className="text-3xl xs:text-4xl sm:text-5xl mb-3 sm:mb-4">🌱</div>
-              <h3 className="text-lg xs:text-xl sm:text-2xl font-serif font-bold text-charcoal mb-3 sm:mb-4 break-words">
+          <div className="flex flex-col gap-4 sm:gap-5 md:grid md:grid-cols-2 md:gap-6 lg:gap-8">
+            <div className="bg-warmWhite p-4 xs:p-5 sm:p-6 md:p-8 rounded-xl sm:rounded-2xl shadow-lg">
+              <div className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl mb-2 sm:mb-3 md:mb-4">🌱</div>
+              <h3 className="text-base xs:text-lg sm:text-xl md:text-2xl font-serif font-bold text-charcoal mb-2 sm:mb-3 md:mb-4 break-words">
                 {t.thoughtfulGrowthTitle}
               </h3>
-              <p className="text-sm xs:text-base text-charcoal/70 break-words">
+              <p className="text-xs xs:text-sm sm:text-base text-charcoal/70 break-words leading-relaxed">
                 {t.thoughtfulGrowthDesc}
               </p>
             </div>
 
-            <div className="bg-warmWhite p-4 xs:p-6 sm:p-8 rounded-xl sm:rounded-2xl shadow-lg">
-              <div className="text-3xl xs:text-4xl sm:text-5xl mb-3 sm:mb-4">🤝</div>
-              <h3 className="text-lg xs:text-xl sm:text-2xl font-serif font-bold text-charcoal mb-3 sm:mb-4 break-words">
+            <div className="bg-warmWhite p-4 xs:p-5 sm:p-6 md:p-8 rounded-xl sm:rounded-2xl shadow-lg">
+              <div className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl mb-2 sm:mb-3 md:mb-4">🤝</div>
+              <h3 className="text-base xs:text-lg sm:text-xl md:text-2xl font-serif font-bold text-charcoal mb-2 sm:mb-3 md:mb-4 break-words">
                 {t.personalConnectionTitle}
               </h3>
-              <p className="text-sm xs:text-base text-charcoal/70 break-words">
+              <p className="text-xs xs:text-sm sm:text-base text-charcoal/70 break-words leading-relaxed">
                 {t.personalConnectionDesc}
               </p>
             </div>
@@ -203,44 +203,44 @@ export default function About() {
       </section>
 
       {/* Values Section */}
-      <section className="px-3 xs:px-4 sm:px-6 py-12 sm:py-16 md:py-20 bg-warmWhite">
+      <section className="px-3 xs:px-4 sm:px-6 py-8 sm:py-12 md:py-16 lg:py-20 bg-warmWhite">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-center mb-8 sm:mb-12 md:mb-16 text-charcoal break-words px-2">
+          <h2 className="text-lg xs:text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-serif font-bold text-center mb-6 sm:mb-10 md:mb-12 lg:mb-16 text-charcoal break-words px-2">
             {t.valuesTitle}
           </h2>
-          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
-            <div className="text-center space-y-3 sm:space-y-4 px-2">
-              <div className="w-14 h-14 xs:w-16 xs:h-16 sm:w-20 sm:h-20 mx-auto bg-sage/20 rounded-full flex items-center justify-center text-2xl xs:text-3xl">
+          <div className="flex flex-col gap-4 sm:gap-6 md:grid md:grid-cols-3 md:gap-6 lg:gap-8">
+            <div className="text-center space-y-2 sm:space-y-3 md:space-y-4 px-2 py-3 sm:py-0">
+              <div className="w-12 h-12 xs:w-14 xs:h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 mx-auto bg-sage/20 rounded-full flex items-center justify-center text-xl xs:text-2xl sm:text-3xl">
                 ⚖️
               </div>
-              <h3 className="text-base xs:text-lg sm:text-xl font-serif font-bold text-charcoal break-words">
+              <h3 className="text-sm xs:text-base sm:text-lg md:text-xl font-serif font-bold text-charcoal break-words">
                 {t.balanceTitle}
               </h3>
-              <p className="text-sm xs:text-base text-charcoal/70 break-words">
+              <p className="text-xs xs:text-sm sm:text-base text-charcoal/70 break-words leading-relaxed">
                 {t.balanceDesc}
               </p>
             </div>
 
-            <div className="text-center space-y-3 sm:space-y-4 px-2">
-              <div className="w-14 h-14 xs:w-16 xs:h-16 sm:w-20 sm:h-20 mx-auto bg-terracotta/20 rounded-full flex items-center justify-center text-2xl xs:text-3xl">
+            <div className="text-center space-y-2 sm:space-y-3 md:space-y-4 px-2 py-3 sm:py-0">
+              <div className="w-12 h-12 xs:w-14 xs:h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 mx-auto bg-terracotta/20 rounded-full flex items-center justify-center text-xl xs:text-2xl sm:text-3xl">
                 💎
               </div>
-              <h3 className="text-base xs:text-lg sm:text-xl font-serif font-bold text-charcoal break-words">
+              <h3 className="text-sm xs:text-base sm:text-lg md:text-xl font-serif font-bold text-charcoal break-words">
                 {t.qualityTitle}
               </h3>
-              <p className="text-sm xs:text-base text-charcoal/70 break-words">
+              <p className="text-xs xs:text-sm sm:text-base text-charcoal/70 break-words leading-relaxed">
                 {t.qualityDesc}
               </p>
             </div>
 
-            <div className="text-center space-y-3 sm:space-y-4 px-2 sm:col-span-2 md:col-span-1">
-              <div className="w-14 h-14 xs:w-16 xs:h-16 sm:w-20 sm:h-20 mx-auto bg-sage/20 rounded-full flex items-center justify-center text-2xl xs:text-3xl">
+            <div className="text-center space-y-2 sm:space-y-3 md:space-y-4 px-2 py-3 sm:py-0">
+              <div className="w-12 h-12 xs:w-14 xs:h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 mx-auto bg-sage/20 rounded-full flex items-center justify-center text-xl xs:text-2xl sm:text-3xl">
                 🧘
               </div>
-              <h3 className="text-base xs:text-lg sm:text-xl font-serif font-bold text-charcoal break-words">
+              <h3 className="text-sm xs:text-base sm:text-lg md:text-xl font-serif font-bold text-charcoal break-words">
                 {t.mindfulnessTitle}
               </h3>
-              <p className="text-sm xs:text-base text-charcoal/70 break-words">
+              <p className="text-xs xs:text-sm sm:text-base text-charcoal/70 break-words leading-relaxed">
                 {t.mindfulnessDesc}
               </p>
             </div>

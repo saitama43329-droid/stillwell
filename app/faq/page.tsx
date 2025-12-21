@@ -19,9 +19,9 @@ export default function FAQ() {
   return (
     <main className="min-h-screen bg-cream">
       {/* Header */}
-      <header className="px-4 sm:px-6 py-5 md:px-12 lg:px-16 bg-warmWhite/95 backdrop-blur-sm sticky top-0 z-50 border-b border-charcoal/10 shadow-sm">
+      <header className="px-3 xs:px-4 sm:px-6 py-3 sm:py-5 md:px-12 lg:px-16 bg-warmWhite/95 backdrop-blur-sm sticky top-0 z-50 border-b border-charcoal/10 shadow-sm">
         <nav className="max-w-7xl mx-auto flex justify-between items-center">
-          <Link href="/" className="text-xl sm:text-2xl md:text-3xl font-serif font-bold text-charcoal transition-colors">
+          <Link href="/" className="text-lg xs:text-xl sm:text-2xl md:text-3xl font-serif font-bold text-charcoal transition-colors">
             StillWell
           </Link>
           
@@ -33,83 +33,83 @@ export default function FAQ() {
             <LanguageSwitcher />
           </div>
 
-          <div className="flex md:hidden items-center gap-3 sm:gap-4">
+          <div className="flex md:hidden items-center gap-2 xs:gap-3 sm:gap-4">
             <LanguageSwitcher />
-            <button onClick={() => document.getElementById('mobile-menu')?.classList.toggle('translate-x-full')} className="p-2 text-charcoal transition-colors">
+            <button onClick={() => document.getElementById('mobile-menu')?.classList.toggle('translate-x-full')} className="p-1.5 sm:p-2 text-charcoal transition-colors min-w-[44px] min-h-[44px] flex items-center justify-center">
               <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" /></svg>
             </button>
           </div>
         </nav>
 
-        <div id="mobile-menu" className="md:hidden fixed top-0 right-0 h-full w-72 shadow-2xl transform translate-x-full transition-transform duration-300 ease-in-out z-50 bg-white">
+        <div id="mobile-menu" className="md:hidden fixed top-0 right-0 h-full w-64 xs:w-72 shadow-2xl transform translate-x-full transition-transform duration-300 ease-in-out z-50 bg-white">
           <div className="flex flex-col h-full bg-white">
-            <div className="flex justify-between items-center p-6 border-b border-charcoal/10 bg-white">
-              <span className="text-xl font-serif font-bold text-charcoal">Menu</span>
-              <button onClick={() => document.getElementById('mobile-menu')?.classList.add('translate-x-full')} className="p-2 text-charcoal transition-colors">
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" /></svg>
+            <div className="flex justify-between items-center p-4 sm:p-6 border-b border-charcoal/10 bg-white">
+              <span className="text-lg sm:text-xl font-serif font-bold text-charcoal">Menu</span>
+              <button onClick={() => document.getElementById('mobile-menu')?.classList.add('translate-x-full')} className="p-2 text-charcoal transition-colors min-w-[44px] min-h-[44px] flex items-center justify-center">
+                <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" /></svg>
               </button>
             </div>
-            <div className="flex flex-col gap-2 p-6 bg-white">
-              <Link href="/" className="text-lg font-medium text-charcoal px-4 py-3 rounded-lg transition-all" onClick={() => document.getElementById('mobile-menu')?.classList.add('translate-x-full')}>{nav.home}</Link>
-              <Link href="/about" className="text-lg font-medium text-charcoal px-4 py-3 rounded-lg transition-all" onClick={() => document.getElementById('mobile-menu')?.classList.add('translate-x-full')}>{nav.about}</Link>
-              <Link href="/lessons" className="text-lg font-medium text-charcoal px-4 py-3 rounded-lg transition-all" onClick={() => document.getElementById('mobile-menu')?.classList.add('translate-x-full')}>{nav.lessons}</Link>
-              <Link href="/blog" className="text-lg font-medium text-charcoal px-4 py-3 rounded-lg transition-all" onClick={() => document.getElementById('mobile-menu')?.classList.add('translate-x-full')}>{nav.blog}</Link>
+            <div className="flex flex-col gap-1 sm:gap-2 p-4 sm:p-6 bg-white">
+              <Link href="/" className="text-base sm:text-lg font-medium text-charcoal px-3 sm:px-4 py-3 rounded-lg transition-all min-h-[44px] flex items-center" onClick={() => document.getElementById('mobile-menu')?.classList.add('translate-x-full')}>{nav.home}</Link>
+              <Link href="/about" className="text-base sm:text-lg font-medium text-charcoal px-3 sm:px-4 py-3 rounded-lg transition-all min-h-[44px] flex items-center" onClick={() => document.getElementById('mobile-menu')?.classList.add('translate-x-full')}>{nav.about}</Link>
+              <Link href="/lessons" className="text-base sm:text-lg font-medium text-charcoal px-3 sm:px-4 py-3 rounded-lg transition-all min-h-[44px] flex items-center" onClick={() => document.getElementById('mobile-menu')?.classList.add('translate-x-full')}>{nav.lessons}</Link>
+              <Link href="/blog" className="text-base sm:text-lg font-medium text-charcoal px-3 sm:px-4 py-3 rounded-lg transition-all min-h-[44px] flex items-center" onClick={() => document.getElementById('mobile-menu')?.classList.add('translate-x-full')}>{nav.blog}</Link>
             </div>
           </div>
         </div>
       </header>
 
       {/* Hero */}
-      <section className="px-4 sm:px-6 py-12 sm:py-16 md:py-20 bg-gradient-to-b from-warmWhite via-cream to-sage/5">
-        <div className="max-w-4xl mx-auto text-center space-y-6 sm:space-y-8">
+      <section className="px-3 xs:px-4 sm:px-6 py-8 sm:py-12 md:py-16 lg:py-20 bg-gradient-to-b from-warmWhite via-cream to-sage/5">
+        <div className="max-w-4xl mx-auto text-center space-y-4 sm:space-y-6 md:space-y-8">
           {/* Decorative Element */}
-          <div className="flex justify-center mb-4">
-            <div className="w-16 h-1 bg-gradient-to-r from-sage via-terracotta to-sage rounded-full"></div>
+          <div className="flex justify-center mb-3 sm:mb-4">
+            <div className="w-12 sm:w-16 h-1 bg-gradient-to-r from-sage via-terracotta to-sage rounded-full"></div>
           </div>
           
-          <div className="flex justify-center mb-6">
-            <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-sage/20 to-terracotta/20 rounded-3xl flex items-center justify-center shadow-lg">
-              <span className="text-3xl sm:text-4xl">❓</span>
+          <div className="flex justify-center mb-4 sm:mb-6">
+            <div className="w-12 h-12 xs:w-14 xs:h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 bg-gradient-to-br from-sage/20 to-terracotta/20 rounded-2xl sm:rounded-3xl flex items-center justify-center shadow-lg">
+              <span className="text-2xl xs:text-3xl sm:text-4xl">❓</span>
             </div>
           </div>
           
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-charcoal leading-tight break-words px-2">
+          <h1 className="text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-serif font-bold text-charcoal leading-tight break-words px-2">
             {t.title}
           </h1>
-          <p className="text-base sm:text-lg md:text-xl text-charcoal/80 max-w-2xl mx-auto leading-relaxed break-words px-2">
+          <p className="text-xs xs:text-sm sm:text-base md:text-lg lg:text-xl text-charcoal/80 max-w-2xl mx-auto leading-relaxed break-words px-2">
             {t.subtitle}
           </p>
           
           {/* Decorative Element */}
-          <div className="flex justify-center mt-4">
-            <div className="w-24 h-0.5 bg-sage/30 rounded-full"></div>
+          <div className="flex justify-center mt-3 sm:mt-4">
+            <div className="w-16 sm:w-24 h-0.5 bg-sage/30 rounded-full"></div>
           </div>
         </div>
       </section>
 
       {/* FAQ Section */}
-      <section className="px-4 sm:px-6 py-12 sm:py-16 md:py-20 bg-cream">
+      <section className="px-3 xs:px-4 sm:px-6 py-8 sm:py-12 md:py-16 lg:py-20 bg-cream">
         <div className="max-w-4xl mx-auto">
-          <div className="space-y-4 sm:space-y-6">
+          <div className="space-y-3 xs:space-y-4 sm:space-y-5 md:space-y-6">
             {t.faqs.map((faq, index) => (
               <div
                 key={index}
-                className="bg-warmWhite rounded-2xl shadow-lg border-2 border-charcoal/10 hover:border-sage/30 transition-all duration-300 overflow-hidden"
+                className="bg-warmWhite rounded-xl sm:rounded-2xl shadow-md sm:shadow-lg border-2 border-charcoal/10 hover:border-sage/30 transition-all duration-300 overflow-hidden"
               >
                 <button
                   onClick={() => toggleFAQ(index)}
-                  className="w-full px-6 sm:px-8 py-5 sm:py-6 flex items-start justify-between gap-4 text-left hover:bg-sage/5 transition-colors duration-200"
+                  className="w-full px-4 xs:px-5 sm:px-6 md:px-8 py-3 xs:py-4 sm:py-5 md:py-6 flex items-start justify-between gap-2 xs:gap-3 sm:gap-4 text-left hover:bg-sage/5 transition-colors duration-200"
                 >
-                  <div className="flex items-start gap-3 sm:gap-4 flex-1">
-                    <span className="flex-shrink-0 w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-br from-sage/20 to-terracotta/20 rounded-full flex items-center justify-center mt-1">
-                      <span className="text-lg sm:text-xl font-bold text-sage">{index + 1}</span>
+                  <div className="flex items-start gap-2 xs:gap-3 sm:gap-4 flex-1">
+                    <span className="flex-shrink-0 w-6 h-6 xs:w-7 xs:h-7 sm:w-8 sm:h-8 md:w-10 md:h-10 bg-gradient-to-br from-sage/20 to-terracotta/20 rounded-full flex items-center justify-center mt-0.5">
+                      <span className="text-xs xs:text-sm sm:text-base md:text-lg lg:text-xl font-bold text-sage">{index + 1}</span>
                     </span>
-                    <h3 className="text-base sm:text-lg md:text-xl font-serif font-bold text-charcoal leading-snug break-words flex-1 pt-1">
+                    <h3 className="text-sm xs:text-base sm:text-lg md:text-xl font-serif font-bold text-charcoal leading-snug break-words flex-1 pt-0.5 sm:pt-1">
                       {faq.question}
                     </h3>
                   </div>
                   <svg
-                    className={`flex-shrink-0 w-5 h-5 sm:w-6 sm:h-6 text-sage transition-transform duration-300 mt-2 ${
+                    className={`flex-shrink-0 w-4 h-4 xs:w-5 xs:h-5 sm:w-6 sm:h-6 text-sage transition-transform duration-300 mt-1 sm:mt-2 ${
                       openIndex === index ? 'rotate-180' : ''
                     }`}
                     fill="none"
@@ -125,9 +125,9 @@ export default function FAQ() {
                     openIndex === index ? 'max-h-[2000px] opacity-100' : 'max-h-0 opacity-0'
                   } overflow-hidden`}
                 >
-                  <div className="px-6 sm:px-8 pb-5 sm:pb-6 pt-2">
-                    <div className="pl-0 sm:pl-14 border-t border-charcoal/10 pt-4 sm:pt-5">
-                      <p className="text-sm sm:text-base md:text-lg text-charcoal/80 leading-relaxed break-words">
+                  <div className="px-4 xs:px-5 sm:px-6 md:px-8 pb-3 xs:pb-4 sm:pb-5 md:pb-6 pt-1 sm:pt-2">
+                    <div className="pl-0 sm:pl-12 md:pl-14 border-t border-charcoal/10 pt-3 sm:pt-4 md:pt-5">
+                      <p className="text-xs xs:text-sm sm:text-base md:text-lg text-charcoal/80 leading-relaxed break-words">
                         {faq.answer}
                       </p>
                     </div>

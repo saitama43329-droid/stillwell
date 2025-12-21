@@ -28,9 +28,9 @@ export default function ArticlePage() {
   return (
     <main className="min-h-screen bg-cream">
       {/* Header */}
-      <header className="px-4 sm:px-6 py-5 md:px-12 lg:px-16 bg-warmWhite/95 backdrop-blur-sm sticky top-0 z-50 border-b border-charcoal/10 shadow-sm">
+      <header className="px-3 xs:px-4 sm:px-6 py-3 sm:py-5 md:px-12 lg:px-16 bg-warmWhite/95 backdrop-blur-sm sticky top-0 z-50 border-b border-charcoal/10 shadow-sm">
         <nav className="max-w-7xl mx-auto flex justify-between items-center">
-          <Link href="/" className="text-xl sm:text-2xl md:text-3xl font-serif font-bold text-charcoal transition-colors">
+          <Link href="/" className="text-lg xs:text-xl sm:text-2xl md:text-3xl font-serif font-bold text-charcoal transition-colors">
             StillWell
           </Link>
           
@@ -42,57 +42,57 @@ export default function ArticlePage() {
             <LanguageSwitcher />
           </div>
 
-          <div className="flex md:hidden items-center gap-3 sm:gap-4">
+          <div className="flex md:hidden items-center gap-2 xs:gap-3 sm:gap-4">
             <LanguageSwitcher />
-            <button onClick={() => document.getElementById('mobile-menu')?.classList.toggle('translate-x-full')} className="p-2 text-charcoal transition-colors">
+            <button onClick={() => document.getElementById('mobile-menu')?.classList.toggle('translate-x-full')} className="p-1.5 sm:p-2 text-charcoal transition-colors min-w-[44px] min-h-[44px] flex items-center justify-center">
               <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" /></svg>
             </button>
           </div>
         </nav>
 
-        <div id="mobile-menu" className="md:hidden fixed top-0 right-0 h-full w-72 shadow-2xl transform translate-x-full transition-transform duration-300 ease-in-out z-50 bg-white">
+        <div id="mobile-menu" className="md:hidden fixed top-0 right-0 h-full w-64 xs:w-72 shadow-2xl transform translate-x-full transition-transform duration-300 ease-in-out z-50 bg-white">
           <div className="flex flex-col h-full bg-white">
-            <div className="flex justify-between items-center p-6 border-b border-charcoal/10 bg-white">
-              <span className="text-xl font-serif font-bold text-charcoal">Menu</span>
-              <button onClick={() => document.getElementById('mobile-menu')?.classList.add('translate-x-full')} className="p-2 text-charcoal transition-colors">
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" /></svg>
+            <div className="flex justify-between items-center p-4 sm:p-6 border-b border-charcoal/10 bg-white">
+              <span className="text-lg sm:text-xl font-serif font-bold text-charcoal">Menu</span>
+              <button onClick={() => document.getElementById('mobile-menu')?.classList.add('translate-x-full')} className="p-2 text-charcoal transition-colors min-w-[44px] min-h-[44px] flex items-center justify-center">
+                <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" /></svg>
               </button>
             </div>
-            <div className="flex flex-col gap-2 p-6 bg-white">
-              <Link href="/" className="text-lg font-medium text-charcoal px-4 py-3 rounded-lg transition-all" onClick={() => document.getElementById('mobile-menu')?.classList.add('translate-x-full')}>{nav.home}</Link>
-              <Link href="/about" className="text-lg font-medium text-charcoal px-4 py-3 rounded-lg transition-all" onClick={() => document.getElementById('mobile-menu')?.classList.add('translate-x-full')}>{nav.about}</Link>
-              <Link href="/lessons" className="text-lg font-medium text-charcoal px-4 py-3 rounded-lg transition-all" onClick={() => document.getElementById('mobile-menu')?.classList.add('translate-x-full')}>{nav.lessons}</Link>
-              <Link href="/blog" className="text-lg font-medium text-charcoal px-4 py-3 rounded-lg transition-all" onClick={() => document.getElementById('mobile-menu')?.classList.add('translate-x-full')}>{nav.blog}</Link>
+            <div className="flex flex-col gap-1 sm:gap-2 p-4 sm:p-6 bg-white">
+              <Link href="/" className="text-base sm:text-lg font-medium text-charcoal px-3 sm:px-4 py-3 rounded-lg transition-all min-h-[44px] flex items-center" onClick={() => document.getElementById('mobile-menu')?.classList.add('translate-x-full')}>{nav.home}</Link>
+              <Link href="/about" className="text-base sm:text-lg font-medium text-charcoal px-3 sm:px-4 py-3 rounded-lg transition-all min-h-[44px] flex items-center" onClick={() => document.getElementById('mobile-menu')?.classList.add('translate-x-full')}>{nav.about}</Link>
+              <Link href="/lessons" className="text-base sm:text-lg font-medium text-charcoal px-3 sm:px-4 py-3 rounded-lg transition-all min-h-[44px] flex items-center" onClick={() => document.getElementById('mobile-menu')?.classList.add('translate-x-full')}>{nav.lessons}</Link>
+              <Link href="/blog" className="text-base sm:text-lg font-medium text-charcoal px-3 sm:px-4 py-3 rounded-lg transition-all min-h-[44px] flex items-center" onClick={() => document.getElementById('mobile-menu')?.classList.add('translate-x-full')}>{nav.blog}</Link>
             </div>
           </div>
         </div>
       </header>
 
       {/* Article Hero */}
-      <section className="px-4 sm:px-6 py-12 sm:py-16 md:py-20 bg-gradient-to-b from-warmWhite via-cream to-sage/5">
+      <section className="px-3 xs:px-4 sm:px-6 py-8 sm:py-12 md:py-16 lg:py-20 bg-gradient-to-b from-warmWhite via-cream to-sage/5">
         <div className="max-w-4xl mx-auto">
           {/* Back Button */}
-          <Link href="/blog" className="inline-flex items-center gap-2 text-sage font-medium mb-8 hover:gap-3 transition-all duration-300 group">
-            <svg className="w-5 h-5 group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <Link href="/blog" className="inline-flex items-center gap-1.5 sm:gap-2 text-sage font-medium mb-5 sm:mb-6 md:mb-8 hover:gap-2 sm:hover:gap-3 transition-all duration-300 group">
+            <svg className="w-4 h-4 sm:w-5 sm:h-5 group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
             </svg>
-            <span className="text-sm sm:text-base">{language === 'en' ? 'Back to Articles' : 'Назад к Статьям'}</span>
+            <span className="text-xs xs:text-sm sm:text-base">{language === 'en' ? 'Back to Articles' : 'Назад к Статьям'}</span>
           </Link>
 
           {/* Icon */}
-          <div className="flex items-center justify-center w-20 h-20 sm:w-24 sm:h-24 bg-gradient-to-br from-sage/20 to-terracotta/20 rounded-3xl mb-6 sm:mb-8 mx-auto shadow-lg">
-            <span className="text-4xl sm:text-5xl">{article.icon}</span>
+          <div className="flex items-center justify-center w-14 h-14 xs:w-16 xs:h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 bg-gradient-to-br from-sage/20 to-terracotta/20 rounded-2xl sm:rounded-3xl mb-4 sm:mb-6 md:mb-8 mx-auto shadow-lg">
+            <span className="text-3xl xs:text-4xl sm:text-5xl">{article.icon}</span>
           </div>
 
           {/* Title */}
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-charcoal leading-tight text-center mb-6 sm:mb-8 break-words px-2">
+          <h1 className="text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-serif font-bold text-charcoal leading-tight text-center mb-4 sm:mb-6 md:mb-8 break-words px-2">
             {article.title}
           </h1>
 
           {/* Meta */}
-          <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 text-sm sm:text-base text-charcoal/70 mb-8">
-            <span className="flex items-center gap-2">
-              <svg className="w-4 h-4 sm:w-5 sm:h-5 text-sage" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 md:gap-6 text-xs xs:text-sm sm:text-base text-charcoal/70 mb-5 sm:mb-6 md:mb-8">
+            <span className="flex items-center gap-1.5 sm:gap-2">
+              <svg className="w-3.5 h-3.5 xs:w-4 xs:h-4 sm:w-5 sm:h-5 text-sage" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
               {article.readTime}
@@ -100,38 +100,38 @@ export default function ArticlePage() {
           </div>
 
           {/* Decorative line */}
-          <div className="flex justify-center mb-8 sm:mb-12">
-            <div className="w-24 sm:w-32 h-1 bg-gradient-to-r from-sage via-terracotta to-sage rounded-full"></div>
+          <div className="flex justify-center mb-6 sm:mb-8 md:mb-12">
+            <div className="w-16 xs:w-20 sm:w-24 md:w-32 h-1 bg-gradient-to-r from-sage via-terracotta to-sage rounded-full"></div>
           </div>
         </div>
       </section>
 
       {/* Article Content */}
-      <article className="px-4 sm:px-6 py-12 sm:py-16 md:py-20 bg-warmWhite">
+      <article className="px-3 xs:px-4 sm:px-6 py-8 sm:py-12 md:py-16 lg:py-20 bg-warmWhite">
         <div className="max-w-3xl mx-auto">
           <div className="prose prose-sm sm:prose-base lg:prose-lg prose-charcoal max-w-none">
             {article.content.map((section, index) => (
-              <div key={index} className="mb-8 sm:mb-10 md:mb-12">
+              <div key={index} className="mb-5 xs:mb-6 sm:mb-8 md:mb-10 lg:mb-12">
                 {section.heading && (
-                  <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-charcoal mb-4 sm:mb-6 break-words">
+                  <h2 className="text-lg xs:text-xl sm:text-2xl md:text-3xl lg:text-4xl font-serif font-bold text-charcoal mb-3 sm:mb-4 md:mb-6 break-words">
                     {section.heading}
                   </h2>
                 )}
                 {section.paragraphs && section.paragraphs.map((paragraph, pIndex) => (
-                  <p key={pIndex} className="text-base sm:text-lg text-charcoal/80 leading-relaxed mb-4 sm:mb-6 break-words">
+                  <p key={pIndex} className="text-xs xs:text-sm sm:text-base md:text-lg text-charcoal/80 leading-relaxed mb-3 sm:mb-4 md:mb-6 break-words">
                     {paragraph}
                   </p>
                 ))}
                 {section.list && (
-                  <ul className="space-y-3 sm:space-y-4 my-6 sm:my-8">
+                  <ul className="space-y-2 xs:space-y-3 sm:space-y-4 my-4 sm:my-6 md:my-8">
                     {section.list.map((item, lIndex) => (
-                      <li key={lIndex} className="flex items-start gap-3 sm:gap-4">
-                        <span className="flex-shrink-0 w-6 h-6 sm:w-7 sm:h-7 bg-sage/20 rounded-full flex items-center justify-center mt-1">
-                          <svg className="w-3 h-3 sm:w-4 sm:h-4 text-sage" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <li key={lIndex} className="flex items-start gap-2 xs:gap-3 sm:gap-4">
+                        <span className="flex-shrink-0 w-5 h-5 xs:w-6 xs:h-6 sm:w-7 sm:h-7 bg-sage/20 rounded-full flex items-center justify-center mt-0.5">
+                          <svg className="w-2.5 h-2.5 xs:w-3 xs:h-3 sm:w-4 sm:h-4 text-sage" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
                           </svg>
                         </span>
-                        <span className="text-base sm:text-lg text-charcoal/80 leading-relaxed break-words flex-1">{item}</span>
+                        <span className="text-xs xs:text-sm sm:text-base md:text-lg text-charcoal/80 leading-relaxed break-words flex-1">{item}</span>
                       </li>
                     ))}
                   </ul>

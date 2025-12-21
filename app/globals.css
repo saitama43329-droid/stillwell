@@ -78,8 +78,12 @@
       font-size: 11px;
     }
     body {
-      padding-left: 0.375rem;
-      padding-right: 0.375rem;
+      padding-left: 0.25rem;
+      padding-right: 0.25rem;
+    }
+    /* Force single column on ultra small */
+    .grid {
+      grid-template-columns: 1fr !important;
     }
   }
   
@@ -89,8 +93,12 @@
       font-size: 12px;
     }
     body {
-      padding-left: 0.5rem;
-      padding-right: 0.5rem;
+      padding-left: 0.375rem;
+      padding-right: 0.375rem;
+    }
+    /* Force single column on very small */
+    .grid {
+      grid-template-columns: 1fr !important;
     }
   }
   
@@ -98,6 +106,10 @@
   @media (min-width: 321px) and (max-width: 360px) {
     html {
       font-size: 13px;
+    }
+    /* Force single column on extra small */
+    .grid {
+      grid-template-columns: 1fr !important;
     }
   }
   
@@ -129,6 +141,27 @@
     button, a {
       max-width: 100%;
     }
+    
+    /* Force single column grids on mobile */
+    .grid {
+      grid-template-columns: 1fr !important;
+      gap: 1rem !important;
+    }
+  }
+  
+  /* Small mobile specific fixes */
+  @media (max-width: 375px) {
+    /* Reduce padding on small screens */
+    section {
+      padding-left: 0.75rem !important;
+      padding-right: 0.75rem !important;
+    }
+    
+    /* Smaller gaps */
+    .space-y-8 { gap: 1.5rem !important; }
+    .space-y-6 { gap: 1rem !important; }
+    .gap-8 { gap: 1rem !important; }
+    .gap-6 { gap: 0.75rem !important; }
   }
   
   /* Touch-friendly tap targets - iOS HIG recommends 44pt minimum */
@@ -314,5 +347,53 @@
   
   .text-fluid-5xl {
     font-size: clamp(2.25rem, 8vw, 3rem);
+  }
+  
+  /* Mobile-first responsive grid helper */
+  .responsive-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  @media (min-width: 480px) {
+    .responsive-grid {
+      gap: 1.5rem;
+    }
+  }
+  
+  @media (min-width: 640px) {
+    .responsive-grid-2 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .responsive-grid-3 {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .responsive-grid {
+      gap: 2rem;
+    }
+  }
+  
+  /* Container padding for small devices */
+  .container-mobile {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+  
+  @media (min-width: 375px) {
+    .container-mobile {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+  }
+  
+  @media (min-width: 640px) {
+    .container-mobile {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
   }
 }

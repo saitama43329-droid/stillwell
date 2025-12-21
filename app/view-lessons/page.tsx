@@ -163,39 +163,39 @@ export default function ViewLessons() {
       </header>
 
       {/* Hero */}
-      <section className="px-4 sm:px-6 py-12 sm:py-16 md:py-24">
-        <div className="max-w-4xl mx-auto text-center space-y-6">
-          <h1 className="text-4xl sm:text-5xl md:text-7xl font-serif font-bold text-charcoal leading-tight px-2 break-words">
+      <section className="px-3 xs:px-4 sm:px-6 py-8 sm:py-12 md:py-16 lg:py-20">
+        <div className="max-w-4xl mx-auto text-center space-y-4 sm:space-y-6">
+          <h1 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-serif font-bold text-charcoal leading-tight px-1 break-words">
             {t.title}
             <br />
             <span className="text-sage inline-block" style={{ hyphens: 'auto', wordBreak: 'keep-all' }}>{t.titleAccent}</span>
           </h1>
-          <p className="text-lg sm:text-xl text-charcoal/70 max-w-2xl mx-auto break-words px-2">
+          <p className="text-sm xs:text-base sm:text-lg md:text-xl text-charcoal/70 max-w-2xl mx-auto break-words px-2">
             {t.subtitle}
           </p>
-          <div className="inline-block px-4 sm:px-6 py-2 bg-sage/20 rounded-full text-sage font-medium mt-4 text-sm sm:text-base break-words">
+          <div className="inline-block px-3 xs:px-4 sm:px-6 py-1.5 xs:py-2 bg-sage/20 rounded-full text-sage font-medium mt-3 sm:mt-4 text-xs xs:text-sm sm:text-base break-words">
             {t.badge}
           </div>
         </div>
       </section>
 
       {/* What to Expect */}
-      <section className="px-3 xs:px-4 sm:px-6 py-8 sm:py-12">
+      <section className="px-3 xs:px-4 sm:px-6 py-6 sm:py-10 md:py-12">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-xl xs:text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-center mb-6 sm:mb-8 md:mb-12 text-charcoal break-words px-2">
+          <h2 className="text-lg xs:text-xl sm:text-2xl md:text-3xl lg:text-4xl font-serif font-bold text-center mb-5 sm:mb-8 md:mb-12 text-charcoal break-words px-2">
             {t.expectTitle}
           </h2>
-          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
+          <div className="flex flex-col gap-3 xs:gap-4 sm:gap-5 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-6 lg:gap-8">
             {lessonHighlights.map((item, idx) => (
               <div
                 key={idx}
-                className="bg-warmWhite p-4 xs:p-6 sm:p-8 rounded-xl sm:rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+                className="bg-warmWhite p-3 xs:p-4 sm:p-5 md:p-6 lg:p-8 rounded-lg xs:rounded-xl sm:rounded-2xl shadow-md sm:shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
               >
-                <div className="text-3xl xs:text-4xl sm:text-5xl mb-3 sm:mb-4">{item.icon}</div>
-                <h3 className="text-base xs:text-lg sm:text-xl font-serif font-bold text-charcoal mb-2 sm:mb-3 break-words">
+                <div className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl mb-2 sm:mb-3 md:mb-4">{item.icon}</div>
+                <h3 className="text-sm xs:text-base sm:text-lg md:text-xl font-serif font-bold text-charcoal mb-1.5 sm:mb-2 md:mb-3 break-words">
                   {item.title}
                 </h3>
-                <p className="text-sm xs:text-base text-charcoal/70 break-words">{item.description}</p>
+                <p className="text-[11px] xs:text-xs sm:text-sm md:text-base text-charcoal/70 break-words leading-relaxed">{item.description}</p>
               </div>
             ))}
           </div>
@@ -203,43 +203,43 @@ export default function ViewLessons() {
       </section>
 
       {/* Lesson Options */}
-      <section className="px-3 xs:px-4 sm:px-6 py-12 sm:py-16 md:py-20 bg-warmWhite">
+      <section className="px-3 xs:px-4 sm:px-6 py-8 sm:py-12 md:py-16 lg:py-20 bg-warmWhite">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-xl xs:text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-center mb-3 sm:mb-4 text-charcoal break-words px-2">
+          <h2 className="text-lg xs:text-xl sm:text-2xl md:text-3xl lg:text-4xl font-serif font-bold text-center mb-2 sm:mb-3 md:mb-4 text-charcoal break-words px-2">
             {t.optionsTitle}
           </h2>
-          <p className="text-center text-sm xs:text-base sm:text-lg text-charcoal/70 mb-8 sm:mb-12 break-words px-2">
+          <p className="text-center text-xs xs:text-sm sm:text-base md:text-lg text-charcoal/70 mb-5 sm:mb-8 md:mb-12 break-words px-2">
             {t.optionsSubtitle}
           </p>
-          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
+          <div className="flex flex-col gap-4 sm:gap-5 md:grid md:grid-cols-3 md:gap-6 lg:gap-8">
             {pricingOptions.map((option, idx) => (
               <div
                 key={idx}
-                className={`bg-cream p-4 xs:p-6 sm:p-8 rounded-2xl sm:rounded-3xl shadow-lg border-2 ${
+                className={`bg-cream p-4 xs:p-5 sm:p-6 md:p-8 rounded-xl sm:rounded-2xl md:rounded-3xl shadow-lg border-2 ${
                   idx === 1
-                    ? "border-terracotta sm:transform sm:scale-105"
+                    ? "border-terracotta md:transform md:scale-105"
                     : "border-sage/20"
                 }`}
               >
-                <div className="text-center mb-4 sm:mb-6">
-                  <div className="inline-block px-3 sm:px-4 py-1 bg-sage/20 rounded-full text-xs sm:text-sm text-sage font-medium mb-3 sm:mb-4 break-words">
+                <div className="text-center mb-3 sm:mb-4 md:mb-6">
+                  <div className="inline-block px-2 xs:px-3 sm:px-4 py-0.5 xs:py-1 bg-sage/20 rounded-full text-[10px] xs:text-xs sm:text-sm text-sage font-medium mb-2 sm:mb-3 md:mb-4 break-words">
                     {option.highlight}
                   </div>
-                  <h3 className="text-lg xs:text-xl sm:text-2xl font-serif font-bold text-charcoal mb-2 break-words">
+                  <h3 className="text-base xs:text-lg sm:text-xl md:text-2xl font-serif font-bold text-charcoal mb-1 sm:mb-2 break-words">
                     {option.title}
                   </h3>
-                  <p className="text-xl xs:text-2xl sm:text-3xl font-bold text-sage mb-2 break-words">
+                  <p className="text-lg xs:text-xl sm:text-2xl md:text-3xl font-bold text-sage mb-1 sm:mb-2 break-words">
                     {option.duration}
                   </p>
-                  <p className="text-charcoal/70 text-xs sm:text-sm break-words">
+                  <p className="text-charcoal/70 text-[10px] xs:text-xs sm:text-sm break-words">
                     {option.description}
                   </p>
                 </div>
-                <ul className="space-y-2 sm:space-y-3 mb-4 sm:mb-6">
+                <ul className="space-y-1.5 sm:space-y-2 md:space-y-3 mb-3 sm:mb-4 md:mb-6">
                   {option.features.map((feature, fIdx) => (
                     <li
                       key={fIdx}
-                      className="flex items-start gap-2 text-xs xs:text-sm text-charcoal/70"
+                      className="flex items-start gap-1.5 sm:gap-2 text-[10px] xs:text-xs sm:text-sm text-charcoal/70"
                     >
                       <span className="text-sage flex-shrink-0 mt-0.5">✓</span>
                       <span className="break-words">{feature}</span>
@@ -249,39 +249,39 @@ export default function ViewLessons() {
               </div>
             ))}
           </div>
-          <p className="text-center text-charcoal/60 mt-6 sm:mt-8 text-xs sm:text-sm break-words px-2">
+          <p className="text-center text-charcoal/60 mt-4 sm:mt-6 md:mt-8 text-[10px] xs:text-xs sm:text-sm break-words px-2">
             {t.pricingNote}
           </p>
         </div>
       </section>
 
       {/* Testimonials */}
-      <section className="px-3 xs:px-4 sm:px-6 py-12 sm:py-16 md:py-20">
+      <section className="px-3 xs:px-4 sm:px-6 py-8 sm:py-12 md:py-16 lg:py-20">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-xl xs:text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-center mb-3 sm:mb-4 text-charcoal break-words px-2">
+          <h2 className="text-lg xs:text-xl sm:text-2xl md:text-3xl lg:text-4xl font-serif font-bold text-center mb-2 sm:mb-3 md:mb-4 text-charcoal break-words px-2">
             {t.storiesTitle}
           </h2>
-          <p className="text-center text-sm xs:text-base text-charcoal/70 mb-8 sm:mb-12 break-words px-2">
+          <p className="text-center text-xs xs:text-sm sm:text-base text-charcoal/70 mb-5 sm:mb-8 md:mb-12 break-words px-2">
             {t.storiesSubtitle}
           </p>
-          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
+          <div className="flex flex-col gap-4 sm:gap-5 md:grid md:grid-cols-3 md:gap-6 lg:gap-8">
             {testimonials.map((testimonial, idx) => (
               <div
                 key={idx}
-                className="bg-warmWhite p-4 xs:p-6 sm:p-8 rounded-xl sm:rounded-2xl shadow-lg flex flex-col"
+                className="bg-warmWhite p-4 xs:p-5 sm:p-6 md:p-8 rounded-lg xs:rounded-xl sm:rounded-2xl shadow-md sm:shadow-lg flex flex-col"
               >
-                <div className="flex gap-0.5 sm:gap-1 mb-3 sm:mb-4">
+                <div className="flex gap-0.5 mb-2 sm:mb-3 md:mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
-                    <span key={i} className="text-terracotta text-base xs:text-lg sm:text-xl">
+                    <span key={i} className="text-terracotta text-sm xs:text-base sm:text-lg md:text-xl">
                       ★
                     </span>
                   ))}
                 </div>
-                <p className="text-sm xs:text-base text-charcoal/80 mb-4 sm:mb-6 italic flex-grow break-words">
+                <p className="text-xs xs:text-sm sm:text-base text-charcoal/80 mb-3 sm:mb-4 md:mb-6 italic flex-grow break-words leading-relaxed">
                   "{testimonial.text}"
                 </p>
-                <div className="border-t border-charcoal/10 pt-3 sm:pt-4">
-                  <p className="font-bold text-charcoal text-base sm:text-lg break-words">{testimonial.name}</p>
+                <div className="border-t border-charcoal/10 pt-2 sm:pt-3 md:pt-4">
+                  <p className="font-bold text-charcoal text-sm xs:text-base sm:text-lg break-words">{testimonial.name}</p>
                 </div>
               </div>
             ))}

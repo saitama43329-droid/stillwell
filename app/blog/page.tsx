@@ -82,9 +82,9 @@ export default function Blog() {
       </section>
 
       {/* Articles Grid */}
-      <section className="px-4 sm:px-6 py-12 sm:py-16 md:py-20 bg-cream">
+      <section className="px-3 xs:px-4 sm:px-6 py-8 sm:py-12 md:py-16 lg:py-20 bg-cream">
         <div className="max-w-6xl mx-auto">
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+          <div className="flex flex-col gap-4 sm:gap-5 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-6 lg:gap-8">
             {blogPosts.map((post, index) => {
               const slugs = [
                 'start-with-what-you-love',
@@ -100,29 +100,29 @@ export default function Blog() {
               return (
               <Link href={`/blog/${slugs[index]}`} key={index}>
                 <article 
-                  className="bg-warmWhite rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden group border-2 border-charcoal/10 hover:border-sage/40 transform hover:-translate-y-1 cursor-pointer h-full flex flex-col"
+                  className="bg-warmWhite rounded-xl sm:rounded-2xl shadow-md sm:shadow-lg hover:shadow-xl sm:hover:shadow-2xl transition-all duration-500 overflow-hidden group border-2 border-charcoal/10 hover:border-sage/40 transform hover:-translate-y-1 cursor-pointer h-full flex flex-col"
                 >
-                <div className="p-6 sm:p-8 flex flex-col flex-1">
+                <div className="p-4 xs:p-5 sm:p-6 md:p-8 flex flex-col flex-1">
                   {/* Icon with background */}
-                  <div className="flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-sage/20 to-terracotta/20 rounded-2xl mb-4 group-hover:scale-110 transition-transform duration-300">
-                    <span className="text-3xl sm:text-4xl">{post.icon}</span>
+                  <div className="flex items-center justify-center w-12 h-12 xs:w-14 xs:h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 bg-gradient-to-br from-sage/20 to-terracotta/20 rounded-xl sm:rounded-2xl mb-3 sm:mb-4 group-hover:scale-110 transition-transform duration-300">
+                    <span className="text-2xl xs:text-3xl sm:text-4xl">{post.icon}</span>
                   </div>
                   
-                  <h2 className="text-xl sm:text-2xl font-serif font-bold text-charcoal leading-snug break-words group-hover:text-sage transition-colors duration-300 mb-4">
+                  <h2 className="text-base xs:text-lg sm:text-xl md:text-2xl font-serif font-bold text-charcoal leading-snug break-words group-hover:text-sage transition-colors duration-300 mb-2 sm:mb-3 md:mb-4">
                     {post.title}
                   </h2>
                   
-                  <p className="text-sm sm:text-base text-charcoal/75 leading-relaxed break-words flex-1 mb-4">
+                  <p className="text-xs xs:text-sm sm:text-base text-charcoal/75 leading-relaxed break-words flex-1 mb-3 sm:mb-4">
                     {post.excerpt}
                   </p>
                   
                   {/* Read time badge */}
-                  <div className="pt-3 border-t border-charcoal/10 mt-auto">
+                  <div className="pt-2 sm:pt-3 border-t border-charcoal/10 mt-auto">
                     <div className="flex items-center justify-between">
-                      <span className="text-xs sm:text-sm font-medium text-sage bg-sage/10 px-3 py-1.5 rounded-full">
+                      <span className="text-[10px] xs:text-xs sm:text-sm font-medium text-sage bg-sage/10 px-2 xs:px-3 py-1 xs:py-1.5 rounded-full">
                         {post.readTime}
                       </span>
-                      <svg className="w-5 h-5 text-sage/60 group-hover:text-sage group-hover:translate-x-1 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <svg className="w-4 h-4 sm:w-5 sm:h-5 text-sage/60 group-hover:text-sage group-hover:translate-x-1 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                       </svg>
                     </div>

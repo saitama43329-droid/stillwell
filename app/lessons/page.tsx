@@ -136,32 +136,32 @@ export default function Lessons() {
       {/* Levels Section */}
       <section className="px-3 xs:px-4 sm:px-6 py-8 sm:py-12">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-xl xs:text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-center mb-6 sm:mb-8 md:mb-12 text-charcoal break-words px-2">
+          <h2 className="text-lg xs:text-xl sm:text-2xl md:text-3xl lg:text-4xl font-serif font-bold text-center mb-5 sm:mb-8 md:mb-12 text-charcoal break-words px-2">
             {t.chooseLevelTitle}
           </h2>
-          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
+          <div className="flex flex-col gap-4 sm:gap-5 md:grid md:grid-cols-3 md:gap-6 lg:gap-8">
             {levels.map((level) => (
               <div
                 key={level.id}
                 onMouseEnter={() => setActiveLevel(level.id)}
                 onMouseLeave={() => setActiveLevel(null)}
-                className={`bg-warmWhite p-4 xs:p-6 sm:p-8 rounded-2xl sm:rounded-3xl shadow-lg transition-all duration-300 cursor-pointer ${
+                className={`bg-warmWhite p-4 xs:p-5 sm:p-6 md:p-8 rounded-xl sm:rounded-2xl md:rounded-3xl shadow-lg transition-all duration-300 cursor-pointer ${
                   activeLevel === level.id
-                    ? "transform -translate-y-2 shadow-2xl"
+                    ? "transform md:-translate-y-2 shadow-2xl"
                     : ""
                 }`}
               >
-                <div className="text-4xl xs:text-5xl sm:text-6xl mb-3 sm:mb-4">{level.icon}</div>
-                <h3 className="text-xl xs:text-2xl sm:text-3xl font-serif font-bold text-charcoal mb-2 break-words">
+                <div className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl mb-2 sm:mb-3 md:mb-4">{level.icon}</div>
+                <h3 className="text-lg xs:text-xl sm:text-2xl md:text-3xl font-serif font-bold text-charcoal mb-1 sm:mb-2 break-words">
                   {level.title}
                 </h3>
-                <p className="text-sage font-medium mb-3 sm:mb-4 text-sm xs:text-base break-words">{level.subtitle}</p>
-                <p className="text-charcoal/70 mb-4 sm:mb-6 text-sm xs:text-base break-words">{level.description}</p>
-                <ul className="space-y-2">
+                <p className="text-sage font-medium mb-2 sm:mb-3 md:mb-4 text-xs xs:text-sm sm:text-base break-words">{level.subtitle}</p>
+                <p className="text-charcoal/70 mb-3 sm:mb-4 md:mb-6 text-xs xs:text-sm sm:text-base break-words">{level.description}</p>
+                <ul className="space-y-1.5 sm:space-y-2">
                   {level.features.map((feature, idx) => (
                     <li
                       key={idx}
-                      className="flex items-start gap-2 text-xs xs:text-sm text-charcoal/70"
+                      className="flex items-start gap-2 text-[11px] xs:text-xs sm:text-sm text-charcoal/70"
                     >
                       <span className="text-sage mt-0.5 flex-shrink-0">✓</span>
                       <span className="break-words">{feature}</span>
@@ -175,27 +175,27 @@ export default function Lessons() {
       </section>
 
       {/* Lesson Types */}
-      <section className="px-4 sm:px-6 py-12 sm:py-20 bg-warmWhite">
+      <section className="px-3 xs:px-4 sm:px-6 py-8 sm:py-12 md:py-16 lg:py-20 bg-warmWhite">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl sm:text-4xl font-serif font-bold text-center mb-8 sm:mb-12 text-charcoal break-words">
+          <h2 className="text-lg xs:text-xl sm:text-2xl md:text-3xl lg:text-4xl font-serif font-bold text-center mb-5 sm:mb-8 md:mb-12 text-charcoal break-words px-2">
             {t.formatsTitle}
           </h2>
-          <div className="grid md:grid-cols-2 gap-6 sm:gap-8">
+          <div className="flex flex-col gap-4 sm:gap-5 md:grid md:grid-cols-2 md:gap-6 lg:gap-8">
             {lessonTypes.map((lesson, idx) => (
               <div
                 key={idx}
-                className={`p-6 sm:p-8 rounded-2xl border-2 ${lesson.color} hover:shadow-xl transition-all duration-300`}
+                className={`p-4 xs:p-5 sm:p-6 md:p-8 rounded-xl sm:rounded-2xl border-2 ${lesson.color} hover:shadow-xl transition-all duration-300`}
               >
-                <div className="flex flex-col sm:flex-row items-start gap-4">
-                  <div className="text-4xl sm:text-5xl">{lesson.icon}</div>
+                <div className="flex flex-col xs:flex-row items-start gap-3 sm:gap-4">
+                  <div className="text-3xl xs:text-4xl sm:text-5xl">{lesson.icon}</div>
                   <div className="flex-1 w-full">
-                    <h3 className="text-xl sm:text-2xl font-serif font-bold text-charcoal mb-2 break-words">
+                    <h3 className="text-base xs:text-lg sm:text-xl md:text-2xl font-serif font-bold text-charcoal mb-1 sm:mb-2 break-words">
                       {lesson.title}
                     </h3>
-                    <p className="text-sm text-sage font-medium mb-3 break-words">
+                    <p className="text-xs sm:text-sm text-sage font-medium mb-2 sm:mb-3 break-words">
                       {lesson.duration}
                     </p>
-                    <p className="text-sm sm:text-base text-charcoal/70 break-words">{lesson.description}</p>
+                    <p className="text-xs xs:text-sm sm:text-base text-charcoal/70 break-words">{lesson.description}</p>
                   </div>
                 </div>
               </div>
