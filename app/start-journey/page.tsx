@@ -111,9 +111,9 @@ export default function StartJourney() {
   return (
     <main className="min-h-screen bg-cream">
       {/* Header */}
-      <header className="px-6 py-5 md:px-12 lg:px-16 bg-warmWhite/95 backdrop-blur-sm sticky top-0 z-50 border-b border-charcoal/10">
+      <header className="px-3 xs:px-4 sm:px-6 py-3 sm:py-5 md:px-12 lg:px-16 bg-warmWhite/95 backdrop-blur-sm sticky top-0 z-50 border-b border-charcoal/10">
         <nav className="max-w-7xl mx-auto flex justify-between items-center">
-          <Link href="/" className="text-2xl md:text-3xl font-serif font-bold text-charcoal transition-colors">StillWell</Link>
+          <Link href="/" className="text-lg xs:text-xl sm:text-2xl md:text-3xl font-serif font-bold text-charcoal transition-colors">StillWell</Link>
           <div className="hidden md:flex items-center gap-6 text-sm font-medium text-charcoal">
             <Link href="/" className="transition-all duration-200">{nav.home}</Link>
             <Link href="/about" className="transition-all duration-200">{nav.about}</Link>
@@ -121,75 +121,75 @@ export default function StartJourney() {
             <Link href="/blog" className="transition-all duration-200">{nav.blog}</Link>
             <LanguageSwitcher />
           </div>
-          <div className="flex md:hidden items-center gap-4">
+          <div className="flex md:hidden items-center gap-2 xs:gap-3 sm:gap-4">
             <LanguageSwitcher />
-            <button onClick={() => document.getElementById('mobile-menu')?.classList.toggle('translate-x-full')} className="p-2 text-charcoal transition-colors"><svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" /></svg></button>
+            <button onClick={() => document.getElementById('mobile-menu')?.classList.toggle('translate-x-full')} className="p-1.5 sm:p-2 text-charcoal transition-colors min-w-[44px] min-h-[44px] flex items-center justify-center"><svg className="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" /></svg></button>
           </div>
         </nav>
-        <div id="mobile-menu" className="md:hidden fixed top-0 right-0 h-full w-72 shadow-2xl transform translate-x-full transition-transform duration-300 ease-in-out z-50" style={{ backgroundColor: '#ffffff' }}>
+        <div id="mobile-menu" className="md:hidden fixed top-0 right-0 h-full w-64 xs:w-72 shadow-2xl transform translate-x-full transition-transform duration-300 ease-in-out z-50" style={{ backgroundColor: '#ffffff' }}>
           <div className="flex flex-col h-full" style={{ backgroundColor: '#ffffff' }}>
-            <div className="flex justify-between items-center p-6 border-b border-charcoal/10" style={{ backgroundColor: '#ffffff' }}>
-              <span className="text-xl font-serif font-bold text-charcoal">Menu</span>
-              <button onClick={() => document.getElementById('mobile-menu')?.classList.add('translate-x-full')} className="p-2 text-charcoal transition-colors"><svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" /></svg></button>
+            <div className="flex justify-between items-center p-4 sm:p-6 border-b border-charcoal/10" style={{ backgroundColor: '#ffffff' }}>
+              <span className="text-lg sm:text-xl font-serif font-bold text-charcoal">Menu</span>
+              <button onClick={() => document.getElementById('mobile-menu')?.classList.add('translate-x-full')} className="p-2 text-charcoal transition-colors min-w-[44px] min-h-[44px] flex items-center justify-center"><svg className="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" /></svg></button>
             </div>
-            <div className="flex flex-col gap-2 p-6" style={{ backgroundColor: '#ffffff' }}>
-              <Link href="/" className="text-lg font-medium text-charcoal px-4 py-3 rounded-lg transition-all" onClick={() => document.getElementById('mobile-menu')?.classList.add('translate-x-full')}>{nav.home}</Link>
-              <Link href="/about" className="text-lg font-medium text-charcoal px-4 py-3 rounded-lg transition-all" onClick={() => document.getElementById('mobile-menu')?.classList.add('translate-x-full')}>{nav.about}</Link>
-              <Link href="/lessons" className="text-lg font-medium text-charcoal px-4 py-3 rounded-lg transition-all" onClick={() => document.getElementById('mobile-menu')?.classList.add('translate-x-full')}>{nav.lessons}</Link>
-              <Link href="/blog" className="text-lg font-medium text-charcoal px-4 py-3 rounded-lg transition-all" onClick={() => document.getElementById('mobile-menu')?.classList.add('translate-x-full')}>{nav.blog}</Link>
+            <div className="flex flex-col gap-1 sm:gap-2 p-4 sm:p-6" style={{ backgroundColor: '#ffffff' }}>
+              <Link href="/" className="text-base sm:text-lg font-medium text-charcoal px-3 sm:px-4 py-3 rounded-lg transition-all min-h-[44px] flex items-center" onClick={() => document.getElementById('mobile-menu')?.classList.add('translate-x-full')}>{nav.home}</Link>
+              <Link href="/about" className="text-base sm:text-lg font-medium text-charcoal px-3 sm:px-4 py-3 rounded-lg transition-all min-h-[44px] flex items-center" onClick={() => document.getElementById('mobile-menu')?.classList.add('translate-x-full')}>{nav.about}</Link>
+              <Link href="/lessons" className="text-base sm:text-lg font-medium text-charcoal px-3 sm:px-4 py-3 rounded-lg transition-all min-h-[44px] flex items-center" onClick={() => document.getElementById('mobile-menu')?.classList.add('translate-x-full')}>{nav.lessons}</Link>
+              <Link href="/blog" className="text-base sm:text-lg font-medium text-charcoal px-3 sm:px-4 py-3 rounded-lg transition-all min-h-[44px] flex items-center" onClick={() => document.getElementById('mobile-menu')?.classList.add('translate-x-full')}>{nav.blog}</Link>
             </div>
           </div>
         </div>
       </header>
 
       {/* Hero Section */}
-      <section className="px-6 py-16 md:py-24">
-        <div className="max-w-4xl mx-auto text-center space-y-8">
-          <h1 className="text-5xl md:text-7xl font-serif font-bold text-charcoal leading-tight">
+      <section className="px-3 xs:px-4 sm:px-6 py-10 sm:py-16 md:py-24">
+        <div className="max-w-4xl mx-auto text-center space-y-5 sm:space-y-8">
+          <h1 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-serif font-bold text-charcoal leading-tight px-1 break-words">
             {t.title}
             <br />
             <span className="text-sage">{t.titleAccent}</span>
           </h1>
           
           {/* Typing Animation */}
-          <div className="h-16 md:h-20 flex items-center justify-center">
-            <div className="text-2xl md:text-3xl font-serif text-terracotta">
+          <div className="h-12 sm:h-16 md:h-20 flex items-center justify-center px-2">
+            <div className="text-base xs:text-lg sm:text-xl md:text-2xl lg:text-3xl font-serif text-terracotta break-words">
               <span>{text}</span>
               <span className="animate-pulse ml-1">|</span>
             </div>
           </div>
 
-          <p className="text-xl text-charcoal/70 max-w-2xl mx-auto">
+          <p className="text-sm xs:text-base sm:text-lg md:text-xl text-charcoal/70 max-w-2xl mx-auto px-2 break-words">
             {t.subtitle}
           </p>
         </div>
       </section>
 
       {/* Steps Section */}
-      <section className="px-6 py-12">
+      <section className="px-3 xs:px-4 sm:px-6 py-8 sm:py-12">
         <div className="max-w-5xl mx-auto">
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
             {steps.map((step, index) => (
               <div
                 key={index}
                 onMouseEnter={() => setHoveredStep(index)}
                 onMouseLeave={() => setHoveredStep(null)}
-                className={`bg-warmWhite p-8 rounded-2xl transition-all duration-300 ${
+                className={`bg-warmWhite p-4 xs:p-6 sm:p-8 rounded-xl sm:rounded-2xl transition-all duration-300 ${
                   hoveredStep === index
                     ? "transform -translate-y-2 shadow-2xl"
                     : "shadow-lg"
                 }`}
               >
-                <div className="text-6xl mb-4 transition-transform duration-300 transform hover:scale-110">
+                <div className="text-4xl xs:text-5xl sm:text-6xl mb-3 sm:mb-4 transition-transform duration-300 transform hover:scale-110">
                   {step.icon}
                 </div>
-                <div className="text-sage/50 text-sm font-bold mb-2">
+                <div className="text-sage/50 text-xs sm:text-sm font-bold mb-1 sm:mb-2">
                   {step.number}
                 </div>
-                <h3 className="text-2xl font-serif font-bold text-charcoal mb-3">
+                <h3 className="text-lg xs:text-xl sm:text-2xl font-serif font-bold text-charcoal mb-2 sm:mb-3 break-words">
                   {step.title}
                 </h3>
-                <p className="text-charcoal/70">{step.description}</p>
+                <p className="text-sm xs:text-base text-charcoal/70 break-words">{step.description}</p>
               </div>
             ))}
           </div>
@@ -256,48 +256,48 @@ export default function StartJourney() {
       </section>
 
       {/* Benefits Section */}
-      <section className="px-6 py-20 bg-warmWhite">
+      <section className="px-3 xs:px-4 sm:px-6 py-12 sm:py-16 md:py-20 bg-warmWhite">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-serif font-bold text-center mb-16 text-charcoal">
+          <h2 className="text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-center mb-8 sm:mb-12 md:mb-16 text-charcoal break-words px-2">
             {t.experienceTitle}
           </h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-cream p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
-              <div className="text-4xl mb-4">🎯</div>
-              <h3 className="text-2xl font-serif font-bold text-charcoal mb-3">
+          <div className="grid sm:grid-cols-2 gap-4 sm:gap-6 md:gap-8">
+            <div className="bg-cream p-4 xs:p-6 sm:p-8 rounded-xl sm:rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
+              <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🎯</div>
+              <h3 className="text-lg xs:text-xl sm:text-2xl font-serif font-bold text-charcoal mb-2 sm:mb-3 break-words">
                 {t.benefit1Title}
               </h3>
-              <p className="text-charcoal/70">
+              <p className="text-sm xs:text-base text-charcoal/70 break-words">
                 {t.benefit1Desc}
               </p>
             </div>
 
-            <div className="bg-cream p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
-              <div className="text-4xl mb-4">⏰</div>
-              <h3 className="text-2xl font-serif font-bold text-charcoal mb-3">
+            <div className="bg-cream p-4 xs:p-6 sm:p-8 rounded-xl sm:rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
+              <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">⏰</div>
+              <h3 className="text-lg xs:text-xl sm:text-2xl font-serif font-bold text-charcoal mb-2 sm:mb-3 break-words">
                 {t.benefit2Title}
               </h3>
-              <p className="text-charcoal/70">
+              <p className="text-sm xs:text-base text-charcoal/70 break-words">
                 {t.benefit2Desc}
               </p>
             </div>
 
-            <div className="bg-cream p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
-              <div className="text-4xl mb-4">💬</div>
-              <h3 className="text-2xl font-serif font-bold text-charcoal mb-3">
+            <div className="bg-cream p-4 xs:p-6 sm:p-8 rounded-xl sm:rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
+              <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">💬</div>
+              <h3 className="text-lg xs:text-xl sm:text-2xl font-serif font-bold text-charcoal mb-2 sm:mb-3 break-words">
                 {t.benefit3Title}
               </h3>
-              <p className="text-charcoal/70">
+              <p className="text-sm xs:text-base text-charcoal/70 break-words">
                 {t.benefit3Desc}
               </p>
             </div>
 
-            <div className="bg-cream p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
-              <div className="text-4xl mb-4">📈</div>
-              <h3 className="text-2xl font-serif font-bold text-charcoal mb-3">
+            <div className="bg-cream p-4 xs:p-6 sm:p-8 rounded-xl sm:rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
+              <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📈</div>
+              <h3 className="text-lg xs:text-xl sm:text-2xl font-serif font-bold text-charcoal mb-2 sm:mb-3 break-words">
                 {t.benefit4Title}
               </h3>
-              <p className="text-charcoal/70">
+              <p className="text-sm xs:text-base text-charcoal/70 break-words">
                 {t.benefit4Desc}
               </p>
             </div>
@@ -306,18 +306,18 @@ export default function StartJourney() {
       </section>
 
       {/* Footer */}
-      <footer className="px-6 py-12 bg-charcoal text-warmWhite">
-        <div className="max-w-7xl mx-auto text-center space-y-4">
-          <div className="text-2xl font-serif font-bold">StillWell</div>
-          <p className="text-warmWhite/70">
+      <footer className="px-3 xs:px-4 sm:px-6 py-8 sm:py-12 bg-charcoal text-warmWhite">
+        <div className="max-w-7xl mx-auto text-center space-y-3 sm:space-y-4">
+          <div className="text-xl sm:text-2xl font-serif font-bold">StillWell</div>
+          <p className="text-sm sm:text-base text-warmWhite/70 break-words px-2">
             {home.footerTagline}
           </p>
-          <p className="text-sm text-warmWhite/50">
+          <p className="text-xs sm:text-sm text-warmWhite/50 break-words px-2">
             {home.footerTeacher}
           </p>
-          <div className="pt-2 pb-4 border-t border-warmWhite/10 mt-4">
+          <div className="pt-2 sm:pt-3 pb-3 sm:pb-4 border-t border-warmWhite/10 mt-3 sm:mt-4">
             <p className="text-xs text-warmWhite/40 mb-1">{home.addressLabel}</p>
-            <p className="text-sm text-warmWhite/60">
+            <p className="text-xs sm:text-sm text-warmWhite/60 break-words px-2">
               {home.footerAddress}
             </p>
           </div>

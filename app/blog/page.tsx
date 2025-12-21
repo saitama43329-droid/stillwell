@@ -21,9 +21,9 @@ export default function Blog() {
   return (
     <main className="min-h-screen bg-cream">
       {/* Header */}
-      <header className="px-6 py-5 md:px-12 lg:px-16 bg-warmWhite/95 backdrop-blur-sm sticky top-0 z-50 border-b border-charcoal/10">
+      <header className="px-3 xs:px-4 sm:px-6 py-3 sm:py-5 md:px-12 lg:px-16 bg-warmWhite/95 backdrop-blur-sm sticky top-0 z-50 border-b border-charcoal/10">
         <nav className="max-w-7xl mx-auto flex justify-between items-center">
-          <Link href="/" className="text-2xl md:text-3xl font-serif font-bold text-charcoal transition-colors">
+          <Link href="/" className="text-lg xs:text-xl sm:text-2xl md:text-3xl font-serif font-bold text-charcoal transition-colors">
             StillWell
           </Link>
           
@@ -34,26 +34,26 @@ export default function Blog() {
             <LanguageSwitcher />
           </div>
 
-          <div className="flex md:hidden items-center gap-4">
+          <div className="flex md:hidden items-center gap-2 xs:gap-3 sm:gap-4">
             <LanguageSwitcher />
-            <button onClick={() => document.getElementById('mobile-menu')?.classList.toggle('translate-x-full')} className="p-2 text-charcoal transition-colors">
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" /></svg>
+            <button onClick={() => document.getElementById('mobile-menu')?.classList.toggle('translate-x-full')} className="p-1.5 sm:p-2 text-charcoal transition-colors min-w-[44px] min-h-[44px] flex items-center justify-center">
+              <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" /></svg>
             </button>
           </div>
         </nav>
 
-        <div id="mobile-menu" className="md:hidden fixed top-0 right-0 h-full w-72 shadow-2xl transform translate-x-full transition-transform duration-300 ease-in-out z-50 bg-white">
+        <div id="mobile-menu" className="md:hidden fixed top-0 right-0 h-full w-64 xs:w-72 shadow-2xl transform translate-x-full transition-transform duration-300 ease-in-out z-50 bg-white">
           <div className="flex flex-col h-full bg-white">
-            <div className="flex justify-between items-center p-6 border-b border-charcoal/10 bg-white">
-              <span className="text-xl font-serif font-bold text-charcoal">Menu</span>
-              <button onClick={() => document.getElementById('mobile-menu')?.classList.add('translate-x-full')} className="p-2 text-charcoal transition-colors">
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" /></svg>
+            <div className="flex justify-between items-center p-4 sm:p-6 border-b border-charcoal/10 bg-white">
+              <span className="text-lg sm:text-xl font-serif font-bold text-charcoal">Menu</span>
+              <button onClick={() => document.getElementById('mobile-menu')?.classList.add('translate-x-full')} className="p-2 text-charcoal transition-colors min-w-[44px] min-h-[44px] flex items-center justify-center">
+                <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" /></svg>
               </button>
             </div>
-            <div className="flex flex-col gap-2 p-6 bg-white">
-              <Link href="/" className="text-lg font-medium text-charcoal px-4 py-3 rounded-lg transition-all" onClick={() => document.getElementById('mobile-menu')?.classList.add('translate-x-full')}>{nav.home}</Link>
-              <Link href="/about" className="text-lg font-medium text-charcoal px-4 py-3 rounded-lg transition-all" onClick={() => document.getElementById('mobile-menu')?.classList.add('translate-x-full')}>{nav.about}</Link>
-              <Link href="/lessons" className="text-lg font-medium text-charcoal px-4 py-3 rounded-lg transition-all" onClick={() => document.getElementById('mobile-menu')?.classList.add('translate-x-full')}>{nav.lessons}</Link>
+            <div className="flex flex-col gap-1 sm:gap-2 p-4 sm:p-6 bg-white">
+              <Link href="/" className="text-base sm:text-lg font-medium text-charcoal px-3 sm:px-4 py-3 rounded-lg transition-all min-h-[44px] flex items-center" onClick={() => document.getElementById('mobile-menu')?.classList.add('translate-x-full')}>{nav.home}</Link>
+              <Link href="/about" className="text-base sm:text-lg font-medium text-charcoal px-3 sm:px-4 py-3 rounded-lg transition-all min-h-[44px] flex items-center" onClick={() => document.getElementById('mobile-menu')?.classList.add('translate-x-full')}>{nav.about}</Link>
+              <Link href="/lessons" className="text-base sm:text-lg font-medium text-charcoal px-3 sm:px-4 py-3 rounded-lg transition-all min-h-[44px] flex items-center" onClick={() => document.getElementById('mobile-menu')?.classList.add('translate-x-full')}>{nav.lessons}</Link>
             </div>
           </div>
         </div>
@@ -176,11 +176,11 @@ export default function Blog() {
       </section>
 
       {/* Footer */}
-      <footer className="px-6 py-12 bg-charcoal text-warmWhite">
-        <div className="max-w-7xl mx-auto text-center space-y-4">
-          <div className="text-2xl font-serif font-bold">StillWell</div>
-          <p className="text-warmWhite/70">{t.footerTagline}</p>
-          <p className="text-sm text-warmWhite/50">{t.footerTeacher}</p>
+      <footer className="px-3 xs:px-4 sm:px-6 py-8 sm:py-12 bg-charcoal text-warmWhite">
+        <div className="max-w-7xl mx-auto text-center space-y-3 sm:space-y-4">
+          <div className="text-xl sm:text-2xl font-serif font-bold">StillWell</div>
+          <p className="text-sm sm:text-base text-warmWhite/70 break-words px-2">{t.footerTagline}</p>
+          <p className="text-xs sm:text-sm text-warmWhite/50 break-words px-2">{t.footerTeacher}</p>
         </div>
       </footer>
     </main>
